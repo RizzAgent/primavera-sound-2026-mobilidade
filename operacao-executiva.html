@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Operação Externa e Acessos — Apresentação à Produção Executiva (v2)</title>
+<title>Operação Externa e Acessos — Apresentação à Produção Executiva (v3)</title>
 <style>
 /* Apresentação à produção executiva. Uma página, navegação por abas, imprimível. Esquema do local sem escala (planta oficial pendente). */
 :root{--bg:#F5F4F0;--sf:#fff;--sf2:#ECEBE5;--ln:#D6D5CE;--fg:#1A1A1A;--fg2:#3A3A3A;--mu:#62665F;--g:#0B6E4F;--gl:#E3F1EB;--warn:#8A6A1F;--wl:#F6EDD6;--red:#9B2C2C;--rl:#F7E2E2;--blue:#1F4E79;--bl:#E1ECF6}
@@ -120,6 +120,15 @@ summary{cursor:pointer;font-weight:700}
 .zoomwrap img.z{width:230%;max-width:none;cursor:zoom-out}
 .cap{font-size:12px;color:var(--mu);margin:6px 0 18px}
 
+/* v3: organograma em fibra ótica */
+.fowrap{background:#07110D;border-radius:14px;padding:6px;overflow-x:auto}
+.fo{width:100%;min-width:960px;height:auto;display:block;font-family:"Helvetica Neue",Arial,sans-serif}
+.fo .pulse{stroke-dasharray:10 260;stroke-dashoffset:0;animation:foPulse 4s linear infinite;opacity:.9}
+@keyframes foPulse{to{stroke-dashoffset:-270}}
+@media(prefers-reduced-motion:reduce){.fo .pulse{animation:none;opacity:0}}
+.foleg{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0 4px;font-size:12px;color:var(--mu)}
+.foleg i{display:inline-block;width:26px;height:3px;vertical-align:middle;margin-right:6px;background:linear-gradient(90deg,#0B6E4F,#2CD69D,#9EF0C9)}
+.foleg i.d{background:repeating-linear-gradient(90deg,#1FB57F 0 4px,transparent 4px 9px)}
 /* v2.1: mapas mentais ilustrados */
 .mm{background:#fff;border:1px solid var(--ln);padding:6px;overflow-x:auto}
 .mm svg{width:100%;min-width:900px;height:auto;display:block;font-family:"Helvetica Neue",Arial,sans-serif}
@@ -137,13 +146,13 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <div class="wrap">
 <div class="brand">RIZZ<span>Gestão operacional externa e apoio aos acessos</span></div>
 <h1>Primavera Sound 2026<br>Operação externa, acessos e interface com órgãos</h1>
-<p>Apresentação à produção executiva: como a Rizz organiza o time, quem responde por quê, como nos conectamos com a organização e com os órgãos públicos, e o mapa estratégico do dia da operação. Documento de trabalho, versão 2, para ajustes em conjunto: inclui a cobertura da saída do público, o turno proposto para a operação de saída da CET, as informações dos portões do caderno de show e a planta atualizada.</p>
+<p>Apresentação à produção executiva: como a Rizz organiza o time, quem responde por quê, como nos conectamos com a organização e com os órgãos públicos, e o mapa estratégico do dia da operação. Documento de trabalho, versão 3 (04/11), para ajustes em conjunto: equipe de contratação Rizz fechada (80), Coordenação Geral em dois turnos de 12 h, produtores de portão contratados pela organização sob responsabilidade da Rizz, 20 rádios em dois canais e cronograma sem ensaio e sem treinamento.</p>
 <div class="facts">
 <div><b>12h30 → 00h30</b><small>Portões abrem 12h30 (PCD 12h15) · término e dispersão 00h30</small></div>
 <div><b>05 e 06/12</b><small>Operação (sáb e dom)</small></div>
-<div><b>03, 04 e 07/12</b><small>Implantação, familiarização, desmobilização</small></div>
+<div><b>03 e 04/12</b><small>Coordenação, supervisão e produtores em campo: testes e organização</small></div>
 <div><b>40.000/dia</b><small>Público oficial</small></div>
-<div><b>75 + 3</b><small>Base decidida + reforços de saída aprovados</small></div>
+<div><b>84/dia</b><small>80 contratação Rizz + 4 produtores de portão (contratação da organização)</small></div>
 <div><b>4</b><small>Portões sob produção Rizz: G, 8, Z, 7</small></div>
 </div>
 </div>
@@ -170,26 +179,25 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <h2>Visão geral do escopo</h2>
 <p class="lead">A Rizz coordena o <b>entorno do evento e a relação operacional com os órgãos públicos</b>, produz os <b>quatro portões G, 8, Z e 7</b> e opera o <b>controle de acesso interno</b> junto às equipes contratadas pela organização. A parte documental e de licenciamento junto aos órgãos é da organização; a Rizz acompanha e gerencia a operação em campo.</p>
 <div class="grid g4" style="margin:18px 0">
-<div class="card hl"><div class="num">2</div><b>Coordenação Geral Externa</b><p class="mu">Um por turno; opera a Sala de Situação.</p></div>
-<div class="card hl"><div class="num">1</div><b>Produtor CET diurno</b><p class="mu">Acompanha o bloqueio viário contra o plano.</p></div>
-<div class="card hl"><div class="num">4</div><b>Produtores de portão</b><p class="mu">Um por portão, 12 h.</p></div>
+<div class="card hl"><div class="num">2</div><b>Coordenação Geral Externa</b><p class="mu">12 h cada: 08h–20h e 14h–02h; opera a Sala de Situação e acompanha a CET.</p></div>
+<div class="card hl"><div class="num">4</div><b>Produtores de portão</b><p class="mu">Um por portão, 10h–22h. Responsabilidade Rizz, contratação da organização.</p></div>
 <div class="card hl"><div class="num">8</div><b>Supervisores (Coordenação de Acessos)</b><p class="mu">4 por turno, volantes.</p></div>
-<div class="card hl"><div class="num">60</div><b>Controladores de acesso</b><p class="mu">30 por turno.</p></div>
-<div class="card wn"><div class="num" style="color:var(--warn)">+3</div><b>Reforço de saída (aprovado)</b><p class="mu">1 Produtor CET de saída e 2 produtores de saída em G e 8.</p></div>
+<div class="card hl"><div class="num">70</div><b>Controladores de acesso</b><p class="mu">35 por turno, só nos dias de evento.</p></div>
+<div class="card hl"><div class="num">20</div><b>Rádios em dois canais</b><p class="mu">Canal 1 operação externa · Canal 2 controle de acesso.</p></div>
 </div>
 <div class="grid g2">
 <div class="card">
 <h3>As quatro camadas de atuação</h3>
 <table><tr><th>Camada</th><th>O que a Rizz faz</th></tr>
 <tr><td><b>1. Coordenação geral externa e dos órgãos</b></td><td>Ponto focal da linha de comunicação entre organização, órgãos e terceiros do externo; opera a Sala de Situação; formaliza tudo por e-mail.</td></tr>
-<tr><td><b>2. Acompanhamento dos serviços externos da organização</b></td><td>Acompanha e orienta, sem contratar nem chefiar: bloqueio viário e orientação externa.</td></tr>
-<tr><td><b>3. Produção dos portões G, 8, Z e 7</b></td><td>Fila, abertura em blocos, fluxos, interface com validação, segurança privada e orientação externa. Em Z e 7, triagem e bloqueio por voucher e credenciamento antecipado.</td></tr>
+<tr><td><b>2. Acompanhamento dos serviços externos da organização</b></td><td>Acompanha e orienta, sem contratar nem chefiar: bloqueio viário (pela Coordenação Geral, com a CET) e orientação externa.</td></tr>
+<tr><td><b>3. Produção dos portões G, 8, Z e 7</b></td><td>Responsabilidade da Rizz, com produtores contratados pela organização. Fila, abertura em blocos, fluxos, interface com validação, segurança privada e orientação externa. Em Z e 7, triagem e bloqueio por voucher e credenciamento antecipado.</td></tr>
 <tr><td><b>4. Controle de acesso interno</b></td><td>Conferência de credencial pela matriz da organização, nos pontos internos e na triagem de Z e 7.</td></tr></table>
 </div>
 <div class="card">
 <h3>Fronteira de responsabilidades</h3>
 <p><span class="badge rz">Rizz</span> coordena o externo, produz os portões, opera o controle interno e a Sala de Situação.</p>
-<p><span class="badge org">Organização</span> licenças e documentos junto aos órgãos; contrata segurança privada, orientação externa, empresa de bloqueio viário e validação de ingresso; define matriz de credenciais e regra de voucher; CCO, comitê de crise e níveis 2 e 3; estrutura da praça do Portão 7; rádios, uniformes e hidratação.</p>
+<p><span class="badge org">Organização</span> licenças e documentos junto aos órgãos; contrata segurança privada, orientação externa, empresa de bloqueio viário e validação de ingresso; define matriz de credenciais e regra de voucher; CCO, comitê de crise e níveis 2 e 3; estrutura da praça do Portão 7; contratação dos produtores de portão; rádios (20), hidratação e kit lanche dos controladores; uniforme em definição (coletes da Rizz já separados).</p>
 <p><span class="badge">Órgãos</span> CET, PMESP, GCM, ViaMobilidade/CPTM, SPTrans, Prefeitura: operações próprias, com a Rizz como ponto focal em campo.</p>
 <div class="card wn" style="margin-top:12px"><b>Não faz parte do escopo Rizz</b><ul><li>Documentação e protocolos nos órgãos públicos</li><li>Frota e venda de shuttles</li><li>Segurança privada, brigada e ticketing</li><li>Revista e contenção física pelos controladores</li></ul></div>
 </div>
@@ -199,52 +207,188 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <!-- 2 ORGANOGRAMA -->
 <section class="tab" id="t2">
 <h2>Organograma e conexões</h2>
-<p class="mu">Estrutura em duas frentes e dois canais de rádio, a partir do plano estratégico da operação. Posições por função, sem nomes. Itens em amarelo são os reforços de saída aprovados nesta versão.</p>
-<div class="legend"><span class="badge rz">Rizz</span><span class="badge pd">Reforço de saída aprovado</span><span class="badge org">Organização / contratados por ela</span><span class="badge">Órgãos públicos</span></div>
+<p class="mu">Duas frentes ligadas como uma rede de fibra ótica: cada fio é uma linha de comando e comunicação, e o verde clareia do planejamento (topo) à execução em campo (base). Posições por função, sem nomes. Versão 3 (04/11).</p>
 
-<div class="topline">
-<div class="orgbox"><b>Organização · Produção Executiva</b><small>CCO com representante de cada área · comitê de crise · declara níveis 2 e 3 · contrata segurança privada, orientação externa, validação e bloqueio viário</small></div>
-<div class="link">⇄ posição fixa da Rizz no CCO<br>interlocução por e-mail</div>
-<div class="dirbox"><b>Direção Rizz · Produtor Operacional Externo</b><small>Interlocução com órgãos · assento no comitê de crise · escalonamento · cobre pausas da Coordenação Geral</small></div>
+<div class="fowrap"><svg class="fo" viewBox="0 0 1180 740" role="img" aria-label="Organograma em conexões de fibra ótica: organização, Direção Rizz, Coordenação Geral Externa, Coordenação de Acessos, supervisores, produtores de portão, controladores, órgãos públicos e equipes da organização">
+<defs><linearGradient id="foG" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="700"><stop offset="0" stop-color="#0B6E4F"/><stop offset=".5" stop-color="#1FB57F"/><stop offset="1" stop-color="#9EF0C9"/></linearGradient>
+<linearGradient id="foH" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#0B6E4F"/><stop offset=".5" stop-color="#2CD69D"/><stop offset="1" stop-color="#0B6E4F"/></linearGradient>
+<filter id="foGlow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+<radialGradient id="foDot"><stop offset="0" stop-color="#E6FFF3"/><stop offset=".45" stop-color="#2CD69D"/><stop offset="1" stop-color="#2CD69D" stop-opacity="0"/></radialGradient></defs>
+<rect width="1180" height="740" rx="14" fill="#07110D"/>
+<path d="M390,83 C420,83 420,83 450,83" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M390,83 C420,83 420,83 450,83" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-0.00s" d="M390,83 C420,83 420,83 450,83" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="390" cy="83" r="7" fill="url(#foDot)"/>
+<circle cx="450" cy="83" r="7" fill="url(#foDot)"/>
+<path d="M750,83 C780,83 780,83 810,83" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M750,83 C780,83 780,83 810,83" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-0.37s" d="M750,83 C780,83 780,83 810,83" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="750" cy="83" r="7" fill="url(#foDot)"/>
+<circle cx="810" cy="83" r="7" fill="url(#foDot)"/>
+<path d="M600,126 C600,158 275,158 275,190" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M600,126 C600,158 275,158 275,190" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-0.74s" d="M600,126 C600,158 275,158 275,190" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="600" cy="126" r="7" fill="url(#foDot)"/>
+<circle cx="275" cy="190" r="7" fill="url(#foDot)"/>
+<path d="M600,126 C600,158 885,158 885,190" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M600,126 C600,158 885,158 885,190" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-1.11s" d="M600,126 C600,158 885,158 885,190" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="600" cy="126" r="7" fill="url(#foDot)"/>
+<circle cx="885" cy="190" r="7" fill="url(#foDot)"/>
+<path d="M275,270 C275,300 150,300 150,330" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M275,270 C275,300 150,300 150,330" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-1.48s" d="M275,270 C275,300 150,300 150,330" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="275" cy="270" r="7" fill="url(#foDot)"/>
+<circle cx="150" cy="330" r="7" fill="url(#foDot)"/>
+<path d="M275,270 C275,300 395,300 395,330" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M275,270 C275,300 395,300 395,330" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-1.85s" d="M275,270 C275,300 395,300 395,330" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="275" cy="270" r="7" fill="url(#foDot)"/>
+<circle cx="395" cy="330" r="7" fill="url(#foDot)"/>
+<path d="M885,270 C885,300 740,300 740,330" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M885,270 C885,300 740,300 740,330" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-2.22s" d="M885,270 C885,300 740,300 740,330" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="885" cy="270" r="7" fill="url(#foDot)"/>
+<circle cx="740" cy="330" r="7" fill="url(#foDot)"/>
+<path d="M885,270 C885,300 1020,300 1020,330" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M885,270 C885,300 1020,300 1020,330" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-2.59s" d="M885,270 C885,300 1020,300 1020,330" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="885" cy="270" r="7" fill="url(#foDot)"/>
+<circle cx="1020" cy="330" r="7" fill="url(#foDot)"/>
+<path d="M150,400 C150,435 272,435 272,470" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M150,400 C150,435 272,435 272,470" stroke="url(#foG)" stroke-width="1.8" fill="none" stroke-dasharray="3 6"/>
+<circle cx="150" cy="400" r="7" fill="url(#foDot)"/>
+<circle cx="272" cy="470" r="7" fill="url(#foDot)"/>
+<path d="M395,400 C395,435 272,435 272,470" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M395,400 C395,435 272,435 272,470" stroke="url(#foG)" stroke-width="1.8" fill="none" stroke-dasharray="3 6"/>
+<circle cx="395" cy="400" r="7" fill="url(#foDot)"/>
+<circle cx="272" cy="470" r="7" fill="url(#foDot)"/>
+<path d="M740,400 C740,435 643,435 643,470" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M740,400 C740,435 643,435 643,470" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-3.70s" d="M740,400 C740,435 643,435 643,470" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="740" cy="400" r="7" fill="url(#foDot)"/>
+<circle cx="643" cy="470" r="7" fill="url(#foDot)"/>
+<path d="M740,400 C740,435 785,435 785,470" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M740,400 C740,435 785,435 785,470" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-0.07s" d="M740,400 C740,435 785,435 785,470" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="740" cy="400" r="7" fill="url(#foDot)"/>
+<circle cx="785" cy="470" r="7" fill="url(#foDot)"/>
+<path d="M1020,400 C1020,435 927,435 927,470" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M1020,400 C1020,435 927,435 927,470" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-0.44s" d="M1020,400 C1020,435 927,435 927,470" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="1020" cy="400" r="7" fill="url(#foDot)"/>
+<circle cx="927" cy="470" r="7" fill="url(#foDot)"/>
+<path d="M1020,400 C1020,435 1069,435 1069,470" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M1020,400 C1020,435 1069,435 1069,470" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-0.81s" d="M1020,400 C1020,435 1069,435 1069,470" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="1020" cy="400" r="7" fill="url(#foDot)"/>
+<circle cx="1069" cy="470" r="7" fill="url(#foDot)"/>
+<path d="M643,544 C643,582 740,582 740,620" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M643,544 C643,582 740,582 740,620" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-1.18s" d="M643,544 C643,582 740,582 740,620" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="643" cy="544" r="7" fill="url(#foDot)"/>
+<circle cx="740" cy="620" r="7" fill="url(#foDot)"/>
+<path d="M785,544 C785,582 740,582 740,620" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M785,544 C785,582 740,582 740,620" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-1.55s" d="M785,544 C785,582 740,582 740,620" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="785" cy="544" r="7" fill="url(#foDot)"/>
+<circle cx="740" cy="620" r="7" fill="url(#foDot)"/>
+<path d="M927,544 C927,582 1020,582 1020,620" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M927,544 C927,582 1020,582 1020,620" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-1.92s" d="M927,544 C927,582 1020,582 1020,620" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="927" cy="544" r="7" fill="url(#foDot)"/>
+<circle cx="1020" cy="620" r="7" fill="url(#foDot)"/>
+<path d="M1069,544 C1069,582 1020,582 1020,620" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M1069,544 C1069,582 1020,582 1020,620" stroke="url(#foG)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-2.29s" d="M1069,544 C1069,582 1020,582 1020,620" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="1069" cy="544" r="7" fill="url(#foDot)"/>
+<circle cx="1020" cy="620" r="7" fill="url(#foDot)"/>
+<path d="M440,230 C570,230 570,230 700,230" stroke="url(#foH)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M440,230 C570,230 570,230 700,230" stroke="url(#foH)" stroke-width="1.8" fill="none"/>
+<path class="pulse" style="animation-delay:-2.66s" d="M440,230 C570,230 570,230 700,230" stroke="#E6FFF3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<circle cx="440" cy="230" r="7" fill="url(#foDot)"/>
+<circle cx="700" cy="230" r="7" fill="url(#foDot)"/>
+<path d="M60,83 C18,83 18,657 40,657" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M60,83 C18,83 18,657 40,657" stroke="url(#foG)" stroke-width="1.8" fill="none" stroke-dasharray="3 6"/>
+<circle cx="60" cy="83" r="7" fill="url(#foDot)"/>
+<circle cx="40" cy="657" r="7" fill="url(#foDot)"/>
+<path d="M975,126 C975,158 885,158 885,190" stroke="url(#foG)" stroke-width="7" fill="none" opacity=".35" filter="url(#foGlow)"/>
+<path d="M975,126 C975,158 885,158 885,190" stroke="url(#foG)" stroke-width="1.8" fill="none" stroke-dasharray="3 6"/>
+<circle cx="975" cy="126" r="7" fill="url(#foDot)"/>
+<circle cx="885" cy="190" r="7" fill="url(#foDot)"/>
+<rect x="60" y="40" width="330" height="86" rx="9" fill="#0E1C2A" stroke="#6F9BC4" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="74" y="66" font-size="15" font-weight="700" fill="#CFE0F0">Organização · Produção Executiva</text>
+<text x="74" y="86" font-size="12" fill="#CFE0F0" opacity=".82">CCO · comitê de crise · níveis 2 e 3</text>
+<text x="74" y="103" font-size="12" fill="#CFE0F0" opacity=".82">contrata segurança, validação e portões</text>
+<rect x="450" y="40" width="300" height="86" rx="9" fill="#F5F4F0" stroke="#F5F4F0" stroke-width="1.4"/>
+<text x="464" y="66" font-size="15" font-weight="700" fill="#111">Direção Rizz</text>
+<text x="464" y="86" font-size="12" fill="#111" opacity=".82">Produtor Operacional Externo</text>
+<text x="464" y="103" font-size="12" fill="#111" opacity=".82">interlocução com órgãos · escalonamento</text>
+<rect x="810" y="40" width="330" height="86" rx="9" fill="#0F1A16" stroke="#2CD69D" stroke-width="1.4"/>
+<text x="824" y="66" font-size="15" font-weight="700" fill="#E6FFF3">Sala de Situação</text>
+<text x="824" y="86" font-size="12" fill="#E6FFF3" opacity=".82">praça do Portão 7 · estrutura da produção</text>
+<text x="824" y="103" font-size="12" fill="#E6FFF3" opacity=".82">a Rizz opera</text>
+<rect x="110" y="190" width="330" height="80" rx="9" fill="#0B6E4F" stroke="#2CD69D" stroke-width="1.4"/>
+<text x="124" y="216" font-size="15" font-weight="700" fill="#fff">Coordenação Geral Externa</text>
+<text x="124" y="236" font-size="12" fill="#fff" opacity=".82">Canal 1 · operação externa · nível 1 no externo</text>
+<rect x="700" y="190" width="370" height="80" rx="9" fill="#0B6E4F" stroke="#2CD69D" stroke-width="1.4"/>
+<text x="714" y="216" font-size="15" font-weight="700" fill="#fff">Coordenação de Acessos</text>
+<text x="714" y="236" font-size="12" fill="#fff" opacity=".82">Canal 2 · controle de acesso · nível 1 nos acessos</text>
+<rect x="40" y="330" width="220" height="70" rx="9" fill="#0F1A16" stroke="#1FB57F" stroke-width="1.4"/>
+<text x="54" y="356" font-size="15" font-weight="700" fill="#E6FFF3">CG-1 · 08h–20h</text>
+<text x="54" y="376" font-size="12" fill="#E6FFF3" opacity=".82">Sala de Situação · CET de manhã</text>
+<rect x="285" y="330" width="220" height="70" rx="9" fill="#0F1A16" stroke="#1FB57F" stroke-width="1.4"/>
+<text x="299" y="356" font-size="15" font-weight="700" fill="#E6FFF3">CG-2 · 14h–02h</text>
+<text x="299" y="376" font-size="12" fill="#E6FFF3" opacity=".82">saída do público · CET à noite</text>
+<rect x="620" y="330" width="240" height="70" rx="9" fill="#0F1A16" stroke="#1FB57F" stroke-width="1.4"/>
+<text x="634" y="356" font-size="15" font-weight="700" fill="#E6FFF3">Supervisores T1 · 4</text>
+<text x="634" y="376" font-size="12" fill="#E6FFF3" opacity=".82">10h–20h · líder no CCO, 2 de setor, base</text>
+<rect x="900" y="330" width="240" height="70" rx="9" fill="#0F1A16" stroke="#1FB57F" stroke-width="1.4"/>
+<text x="914" y="356" font-size="15" font-weight="700" fill="#E6FFF3">Supervisores T2 · 4</text>
+<text x="914" y="376" font-size="12" fill="#E6FFF3" opacity=".82">16h–02h · líder no CCO, 2 de setor, base</text>
+<rect x="40" y="470" width="465" height="104" rx="9" fill="#121614" stroke="#7B8A82" stroke-width="1.4"/>
+<text x="54" y="496" font-size="15" font-weight="700" fill="#DDE5E0">Órgãos públicos</text>
+<rect x="580" y="470" width="126" height="74" rx="9" fill="#121614" stroke="#7B8A82" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="594" y="496" font-size="15" font-weight="700" fill="#DDE5E0">Portão G</text>
+<text x="594" y="516" font-size="12" fill="#DDE5E0" opacity=".82">produtor 10h–22h</text>
+<text x="594" y="533" font-size="12" fill="#DDE5E0" opacity=".82">contratação org.</text>
+<rect x="722" y="470" width="126" height="74" rx="9" fill="#121614" stroke="#7B8A82" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="736" y="496" font-size="15" font-weight="700" fill="#DDE5E0">Portão 8</text>
+<text x="736" y="516" font-size="12" fill="#DDE5E0" opacity=".82">produtor 10h–22h</text>
+<text x="736" y="533" font-size="12" fill="#DDE5E0" opacity=".82">contratação org.</text>
+<rect x="864" y="470" width="126" height="74" rx="9" fill="#121614" stroke="#7B8A82" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="878" y="496" font-size="15" font-weight="700" fill="#DDE5E0">Portão Z</text>
+<text x="878" y="516" font-size="12" fill="#DDE5E0" opacity=".82">produtor 10h–22h</text>
+<text x="878" y="533" font-size="12" fill="#DDE5E0" opacity=".82">contratação org.</text>
+<rect x="1006" y="470" width="126" height="74" rx="9" fill="#121614" stroke="#7B8A82" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="1020" y="496" font-size="15" font-weight="700" fill="#DDE5E0">Portão 7</text>
+<text x="1020" y="516" font-size="12" fill="#DDE5E0" opacity=".82">produtor 10h–22h</text>
+<text x="1020" y="533" font-size="12" fill="#DDE5E0" opacity=".82">contratação org.</text>
+<rect x="620" y="620" width="240" height="74" rx="9" fill="#0F1A16" stroke="#1FB57F" stroke-width="1.4"/>
+<text x="634" y="646" font-size="15" font-weight="700" fill="#E6FFF3">Controladores T1 · 35</text>
+<text x="634" y="666" font-size="12" fill="#E6FFF3" opacity=".82">10h–20h · pontos internos e Z e 7</text>
+<rect x="900" y="620" width="240" height="74" rx="9" fill="#0F1A16" stroke="#1FB57F" stroke-width="1.4"/>
+<text x="914" y="646" font-size="15" font-weight="700" fill="#E6FFF3">Controladores T2 · 35</text>
+<text x="914" y="666" font-size="12" fill="#E6FFF3" opacity=".82">16h–02h · pontos internos e Z e 7</text>
+<rect x="40" y="620" width="465" height="74" rx="9" fill="#121614" stroke="#7B8A82" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="54" y="646" font-size="15" font-weight="700" fill="#DDE5E0">Equipes da organização</text>
+<text x="54" y="666" font-size="12" fill="#DDE5E0" opacity=".82">segurança privada 400 · validação 68 · orientação externa 60</text>
+<text x="54" y="683" font-size="12" fill="#DDE5E0" opacity=".82">bloqueio viário · credenciamento</text>
+<rect x="54" y="512" width="43" height="22" rx="11" fill="none" stroke="#1FB57F" stroke-width="1"/><text x="65" y="527" font-size="11.5" fill="#CDEFE0">CET</text>
+<rect x="105" y="512" width="221" height="22" rx="11" fill="none" stroke="#1FB57F" stroke-width="1"/><text x="116" y="527" font-size="11.5" fill="#CDEFE0">PM · Cia ao lado do Portão A</text>
+<rect x="334" y="512" width="43" height="22" rx="11" fill="none" stroke="#1FB57F" stroke-width="1"/><text x="345" y="527" font-size="11.5" fill="#CDEFE0">GCM</text>
+<rect x="54" y="542" width="114" height="22" rx="11" fill="none" stroke="#1FB57F" stroke-width="1"/><text x="65" y="557" font-size="11.5" fill="#CDEFE0">ViaMobilidade</text>
+<rect x="176" y="542" width="72" height="22" rx="11" fill="none" stroke="#1FB57F" stroke-width="1"/><text x="187" y="557" font-size="11.5" fill="#CDEFE0">SPTrans</text>
+<rect x="256" y="542" width="93" height="22" rx="11" fill="none" stroke="#1FB57F" stroke-width="1"/><text x="267" y="557" font-size="11.5" fill="#CDEFE0">Prefeitura</text>
+<text x="590" y="182" font-size="11.5" fill="#9EB3A8" text-anchor="middle">ponte entre canais 1 e 2</text>
+<text x="40" y="722" font-size="11.5" fill="#7B8A82">Linha contínua com pulso: comando e comunicação Rizz · linha tracejada: interface com órgãos e equipes da organização · bordas tracejadas: contratados pela organização</text>
+</svg>
 </div>
-
-<div class="lanes">
-<div class="lane">
-<header>Frente 1 · Mobilidade externa e órgãos<small>Canal de rádio 1 · base na Sala de Situação, praça do Portão 7</small></header>
-<div class="body">
-<div class="pos"><b>Coordenação Geral Externa</b><span class="meta">1 por turno · ponto focal da linha de comunicação · nível 1 no externo · informa o CCO em até 5 min</span></div>
-<div class="pos sub"><b>Produtor CET diurno</b><span class="meta">1 · 07h–17h (D1) e 09h–19h (D2) · alinha com gestores da CET e confere implantação do bloqueio contra o plano</span></div>
-<div class="pos sub prop"><b>Produtor CET de saída</b><span class="meta">1 · aprovado 17h–02h · reversão dos bolsões, dosagem, estação, reabertura de vias</span></div>
-<div class="pos gov"><b>Interfaces em campo</b><span class="meta">CET · PMESP (posto no batalhão, praça do Portão A; oficial de ligação solicitado na Sala de Situação) · GCM e demais órgãos na praça do Portão 7 · ponto focal ViaMobilidade · ponto focal SPTrans · prefeitura (ambulantes)</span></div>
-</div></div>
-
-<div class="lane l2">
-<header>Frente 2 · Portões e controle de acesso<small>Canal de rádio 2 · posição Coordenação de Acessos no CCO</small></header>
-<div class="body">
-<div class="pos"><b>Coordenação de Acessos · 8 supervisores</b><span class="meta">4 por turno · nível 1 em portões e controle interno</span></div>
-<div class="pos sub"><b>Supervisor-líder</b><span class="meta">no CCO · voz da Coordenação de Acessos</span></div>
-<div class="pos sub"><b>2 supervisores de setor</b><span class="meta">volantes nas áreas frágeis, ponto de encontro fixo</span></div>
-<div class="pos sub"><b>Supervisor de base</b><span class="meta">praça do Portão 7 · material, check-in/out · cobre Z e 7 antes das 14h (T1) e a saída por G e 8 no T2</span></div>
-<div class="pos"><b>Produtores de portão G · 8 · Z · 7</b><span class="meta">1 por portão · 10h–22h · fila, abertura, fluxos, interface com validação, segurança privada e orientação externa · Z e 7 donos da triagem</span></div>
-<div class="pos sub prop"><b>Produtores de saída G e 8</b><span class="meta">2 · aprovado 18h–02h · cobrem a saída do público e a passagem</span></div>
-<div class="pos"><b>Controladores de acesso · 60</b><span class="meta">30 no T1 (10h–20h) e 30 no T2 (16h–02h) · pontos internos e triagem de Z e 7 · sem revista e sem contenção</span></div>
-</div></div>
-
-<div class="lane l3">
-<header>Coordenamos e nos conectamos<small>Contratados e operados pela organização</small></header>
-<div class="body">
-<div class="pos ext"><b>Segurança privada · 400</b><span class="meta">dos portões para dentro · assume o portão após o turno do produtor, com passagem registrada</span></div>
-<div class="pos ext"><b>Validação de ingresso · 68</b><span class="meta">estimativa ~50 no G e ~18 no 8 · interface com o produtor de portão</span></div>
-<div class="pos ext"><b>Orientação externa · 60</b><span class="meta">supervisão própria · produtores de portão auxiliam</span></div>
-<div class="pos ext"><b>Empresa de bloqueio viário</b><span class="meta">cavaletes e cones · acompanhada pelo Produtor CET</span></div>
-<div class="pos ext"><b>Suporte ao público 48 · Orientação interna 40 · Empulseiramento 6</b><span class="meta">equipes de serviço da produção</span></div>
-<div class="pos ext"><b>Credenciamento</b><span class="meta">matriz de credenciais e regra de voucher definidas pela organização</span></div>
-</div></div>
-</div>
+<div class="foleg"><span><i></i>comando e comunicação Rizz (pulso de luz)</span><span><i class="d"></i>interface com órgãos e equipes da organização</span><span>bordas tracejadas: contratados pela organização</span></div>
 
 <div class="grid g3" style="margin-top:16px">
 <div class="card hl"><h3>Como as frentes se falam</h3><ul>
-<li>Coordenação Geral ↔ Coordenação de Acessos: cruzam informação de fila × vazão do externo no CCO</li>
+<li>Coordenação Geral ↔ Coordenação de Acessos: cruzam informação de fila × vazão do externo no CCO; as duas CG se sobrepõem das 14h às 20h</li>
 <li>Supervisor-líder fica no CCO e leva a voz de acessos</li>
 <li>Ponte entre canais 1 e 2 pelo supervisor-líder e pela Coordenação Geral</li></ul></div>
 <div class="card hl"><h3>Quem decide o quê</h3><ul>
@@ -252,16 +396,16 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <li><b>Nível 1 em portões e interno:</b> Coordenação de Acessos</li>
 <li><b>Níveis 2 e 3:</b> organização (comitê de crise), com a Rizz executando</li></ul></div>
 <div class="card hl"><h3>Efetivo por dia</h3><ul>
-<li>Base decidida: <b>75</b> (2 + 1 + 4 + 8 + 60) mais Direção</li>
-<li>Reforço aprovado: <b>+3</b> (Produtor CET de saída e 2 produtores de saída G e 8) = <b>78</b></li>
-<li>Reservas nominais além desses, em sobreaviso</li></ul></div>
+<li>Contratação Rizz: <b>80</b> (2 CG + 8 supervisores + 70 controladores) mais Direção</li>
+<li>Produtores de portão: <b>4</b>, contratação da organização = <b>84</b> em campo</li>
+<li>Time confirmado, sem reservas contratadas; pessoas indicadas cobrem falta</li></ul></div>
 </div>
 
 <div class="sep"></div>
 <h2>Mapas de ligação (ilustração)</h2>
 <p class="mu">Duas leituras visuais do mesmo organograma. O mapa mental segue o ciclo de gestão (planejar, organizar, dirigir, controlar), como no modelo do processo administrativo. O mapa de ligação mostra quem fala com quem a partir da Sala de Situação.</p>
 <h3>Mapa mental da operação</h3>
-<div class="mm"><svg viewBox="0 0 1400 900" role="img" aria-label="Mapa mental da operação: planejar, organizar, dirigir e controlar"><rect width="1400" height="900" fill="#fff"/><defs><radialGradient id="cg" cx="40%" cy="35%"><stop offset="0" stop-color="#d9d6ff"/><stop offset="1" stop-color="#7f87d9"/></radialGradient></defs><path d="M630,395 C630,362 550,330 520,330" stroke="#1F3A93" stroke-width="16" fill="none" stroke-linecap="round"/><text x="615" y="316" font-size="24" font-weight="800" fill="#1F3A93" text-anchor="middle">Planejar</text><path d="M520,330 C465,330 465,150 430,150" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="150" x2="430" y2="150" stroke="#1F3A93" stroke-width="3"/><text x="410" y="110" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Plano estratégico</text><text x="410" y="128" font-size="13" fill="#3a3a3a" text-anchor="end">4 camadas · 2 frentes · fronteira com a</text><text x="410" y="142" font-size="13" fill="#3a3a3a" text-anchor="end">organização</text><path d="M520,330 C465,330 465,240 430,240" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="240" x2="430" y2="240" stroke="#1F3A93" stroke-width="3"/><text x="410" y="200" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Cronograma</text><text x="410" y="218" font-size="13" fill="#3a3a3a" text-anchor="end">ensaio 25–26/11 · treino 28–29/11 ·</text><text x="410" y="232" font-size="13" fill="#3a3a3a" text-anchor="end">implantação 03–04/12</text><path d="M520,330 C465,330 465,316 430,316" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="316" x2="430" y2="316" stroke="#1F3A93" stroke-width="3"/><text x="410" y="290" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Mapeamento de acessos</text><text x="410" y="308" font-size="13" fill="#3a3a3a" text-anchor="end">pontos, áreas frágeis e planta oficial</text><path d="M520,330 C465,330 465,420 430,420" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="420" x2="430" y2="420" stroke="#1F3A93" stroke-width="3"/><text x="410" y="380" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Pedidos à organização</text><text x="410" y="398" font-size="13" fill="#3a3a3a" text-anchor="end">rádios · uniformes · hidratação ·</text><text x="410" y="412" font-size="13" fill="#3a3a3a" text-anchor="end">credenciais</text><path d="M770,395 C770,362 850,330 880,330" stroke="#A3198C" stroke-width="16" fill="none" stroke-linecap="round"/><text x="785" y="316" font-size="24" font-weight="800" fill="#A3198C" text-anchor="middle">Controlar</text><path d="M880,330 C935,330 935,150 970,150" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="150" x2="1290" y2="150" stroke="#A3198C" stroke-width="3"/><text x="990" y="110" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Indicadores</text><text x="990" y="128" font-size="13" fill="#3a3a3a" text-anchor="start">filas por portão · vazão da estação ·</text><text x="990" y="142" font-size="13" fill="#3a3a3a" text-anchor="start">bolsões · espera abaixo de 40 min</text><path d="M880,330 C935,330 935,240 970,240" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="240" x2="1290" y2="240" stroke="#A3198C" stroke-width="3"/><text x="990" y="200" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Momento do controle</text><text x="990" y="218" font-size="13" fill="#3a3a3a" text-anchor="start">antes: ensaio · durante: CCO · depois:</text><text x="990" y="232" font-size="13" fill="#3a3a3a" text-anchor="start">debriefing</text><path d="M880,330 C935,330 935,330 970,330" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="330" x2="1290" y2="330" stroke="#A3198C" stroke-width="3"/><text x="990" y="290" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Ação corretiva</text><text x="990" y="308" font-size="13" fill="#3a3a3a" text-anchor="start">dosagem em blocos · plano B · escada de</text><text x="990" y="322" font-size="13" fill="#3a3a3a" text-anchor="start">níveis 1 a 3</text><path d="M880,330 C935,330 935,420 970,420" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="420" x2="1290" y2="420" stroke="#A3198C" stroke-width="3"/><text x="990" y="380" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Presente em todos os níveis</text><text x="990" y="398" font-size="13" fill="#3a3a3a" text-anchor="start">CCO · supervisores · produtores de</text><text x="990" y="412" font-size="13" fill="#3a3a3a" text-anchor="start">portão</text><path d="M630,505 C630,537 550,570 520,570" stroke="#2E9E4F" stroke-width="16" fill="none" stroke-linecap="round"/><text x="615" y="608" font-size="24" font-weight="800" fill="#2E9E4F" text-anchor="middle">Dirigir</text><path d="M520,570 C465,570 465,560 430,560" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="560" x2="430" y2="560" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="520" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Briefing e Sala de Situação</text><text x="410" y="538" font-size="13" fill="#3a3a3a" text-anchor="end">10h · Coordenação Geral comanda o</text><text x="410" y="552" font-size="13" fill="#3a3a3a" text-anchor="end">externo</text><path d="M520,570 C465,570 465,650 430,650" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="650" x2="430" y2="650" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="610" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Passagens</text><text x="410" y="628" font-size="13" fill="#3a3a3a" text-anchor="end">16–17h turnos · 22h segurança privada ·</text><text x="410" y="642" font-size="13" fill="#3a3a3a" text-anchor="end">23h postura de saída</text><path d="M520,570 C465,570 465,740 430,740" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="740" x2="430" y2="740" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="700" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Interface com órgãos</text><text x="410" y="718" font-size="13" fill="#3a3a3a" text-anchor="end">CET · PMESP · GCM · ViaMobilidade ·</text><text x="410" y="732" font-size="13" fill="#3a3a3a" text-anchor="end">SPTrans</text><path d="M520,570 C465,570 465,830 430,830" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="830" x2="430" y2="830" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="790" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Liderança em campo</text><text x="410" y="808" font-size="13" fill="#3a3a3a" text-anchor="end">Coord. Geral · Coord. de Acessos ·</text><text x="410" y="822" font-size="13" fill="#3a3a3a" text-anchor="end">produtor de portão</text><path d="M770,505 C770,537 850,570 880,570" stroke="#B5223B" stroke-width="16" fill="none" stroke-linecap="round"/><text x="785" y="608" font-size="24" font-weight="800" fill="#B5223B" text-anchor="middle">Organizar</text><path d="M880,570 C935,570 935,546 970,546" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="546" x2="1290" y2="546" stroke="#B5223B" stroke-width="3"/><text x="990" y="520" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Estrutura</text><text x="990" y="538" font-size="13" fill="#3a3a3a" text-anchor="start">2 frentes · 2 canais de rádio</text><path d="M880,570 C935,570 935,650 970,650" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="650" x2="1290" y2="650" stroke="#B5223B" stroke-width="3"/><text x="990" y="610" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Equipe · 78 por dia</text><text x="990" y="628" font-size="13" fill="#3a3a3a" text-anchor="start">2 CG · 2 CET · 6 produtores · 8</text><text x="990" y="642" font-size="13" fill="#3a3a3a" text-anchor="start">supervisores · 60 controladores</text><path d="M880,570 C935,570 935,740 970,740" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="740" x2="1290" y2="740" stroke="#B5223B" stroke-width="3"/><text x="990" y="700" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Sistemas</text><text x="990" y="718" font-size="13" fill="#3a3a3a" text-anchor="start">autoridade (níveis) · atividade (RACI) ·</text><text x="990" y="732" font-size="13" fill="#3a3a3a" text-anchor="start">comunicação</text><path d="M880,570 C935,570 935,816 970,816" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="816" x2="1290" y2="816" stroke="#B5223B" stroke-width="3"/><text x="990" y="790" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Base de operação</text><text x="990" y="808" font-size="13" fill="#3a3a3a" text-anchor="start">Sala de Situação · praça do Portão 7</text><circle cx="700" cy="450" r="108" fill="url(#cg)" stroke="#5f67c4" stroke-width="3"/><text x="700" y="432" font-size="19" font-weight="800" text-anchor="middle" fill="#fff">Operação externa</text><text x="700" y="454" font-size="19" font-weight="800" text-anchor="middle" fill="#fff">e acessos</text><text x="700" y="487" font-size="12" text-anchor="middle" fill="#fff">Primavera Sound 2026</text><text x="700" y="504" font-size="11" text-anchor="middle" fill="#eef">ciclo contínuo e interativo</text><text x="700" y="862" font-size="14" text-anchor="middle" fill="#555">Planejado → Organizado → Dirigido → Controlado → Executado  ·  o controle realimenta o planejamento (debriefing 01h45 e 10h do D2)</text></svg></div>
+<div class="mm"><svg viewBox="0 0 1400 900" role="img" aria-label="Mapa mental da operação: planejar, organizar, dirigir e controlar"><rect width="1400" height="900" fill="#fff"/><defs><radialGradient id="cg" cx="40%" cy="35%"><stop offset="0" stop-color="#d9d6ff"/><stop offset="1" stop-color="#7f87d9"/></radialGradient></defs><path d="M630,395 C630,362 550,330 520,330" stroke="#1F3A93" stroke-width="16" fill="none" stroke-linecap="round"/><text x="615" y="316" font-size="24" font-weight="800" fill="#1F3A93" text-anchor="middle">Planejar</text><path d="M520,330 C465,330 465,150 430,150" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="150" x2="430" y2="150" stroke="#1F3A93" stroke-width="3"/><text x="410" y="110" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Plano estratégico</text><text x="410" y="128" font-size="13" fill="#3a3a3a" text-anchor="end">4 camadas · 2 frentes · fronteira com a</text><text x="410" y="142" font-size="13" fill="#3a3a3a" text-anchor="end">organização</text><path d="M520,330 C465,330 465,240 430,240" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="240" x2="430" y2="240" stroke="#1F3A93" stroke-width="3"/><text x="410" y="200" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Cronograma</text><text x="410" y="218" font-size="13" fill="#3a3a3a" text-anchor="end">sem ensaio e sem treinamento · testes</text><text x="410" y="232" font-size="13" fill="#3a3a3a" text-anchor="end">03–04/12 · instrução no dia</text><path d="M520,330 C465,330 465,316 430,316" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="316" x2="430" y2="316" stroke="#1F3A93" stroke-width="3"/><text x="410" y="290" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Mapeamento de acessos</text><text x="410" y="308" font-size="13" fill="#3a3a3a" text-anchor="end">pontos, áreas frágeis e planta oficial</text><path d="M520,330 C465,330 465,420 430,420" stroke="#1F3A93" stroke-width="3" fill="none"/><line x1="110" y1="420" x2="430" y2="420" stroke="#1F3A93" stroke-width="3"/><text x="410" y="380" font-size="17" font-weight="700" fill="#1F3A93" text-anchor="end">Pedidos à organização</text><text x="410" y="398" font-size="13" fill="#3a3a3a" text-anchor="end">20 rádios · hidratação · kit lanche ·</text><text x="410" y="412" font-size="13" fill="#3a3a3a" text-anchor="end">credenciais</text><path d="M770,395 C770,362 850,330 880,330" stroke="#A3198C" stroke-width="16" fill="none" stroke-linecap="round"/><text x="785" y="316" font-size="24" font-weight="800" fill="#A3198C" text-anchor="middle">Controlar</text><path d="M880,330 C935,330 935,150 970,150" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="150" x2="1290" y2="150" stroke="#A3198C" stroke-width="3"/><text x="990" y="110" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Indicadores</text><text x="990" y="128" font-size="13" fill="#3a3a3a" text-anchor="start">filas por portão · vazão da estação ·</text><text x="990" y="142" font-size="13" fill="#3a3a3a" text-anchor="start">bolsões · espera abaixo de 40 min</text><path d="M880,330 C935,330 935,240 970,240" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="240" x2="1290" y2="240" stroke="#A3198C" stroke-width="3"/><text x="990" y="200" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Momento do controle</text><text x="990" y="218" font-size="13" fill="#3a3a3a" text-anchor="start">antes: testes 03–04/12 · durante: CCO ·</text><text x="990" y="232" font-size="13" fill="#3a3a3a" text-anchor="start">depois: debriefing</text><path d="M880,330 C935,330 935,330 970,330" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="330" x2="1290" y2="330" stroke="#A3198C" stroke-width="3"/><text x="990" y="290" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Ação corretiva</text><text x="990" y="308" font-size="13" fill="#3a3a3a" text-anchor="start">dosagem em blocos · plano B · escada de</text><text x="990" y="322" font-size="13" fill="#3a3a3a" text-anchor="start">níveis 1 a 3</text><path d="M880,330 C935,330 935,420 970,420" stroke="#A3198C" stroke-width="3" fill="none"/><line x1="970" y1="420" x2="1290" y2="420" stroke="#A3198C" stroke-width="3"/><text x="990" y="380" font-size="17" font-weight="700" fill="#A3198C" text-anchor="start">Presente em todos os níveis</text><text x="990" y="398" font-size="13" fill="#3a3a3a" text-anchor="start">CCO · supervisores · produtores de</text><text x="990" y="412" font-size="13" fill="#3a3a3a" text-anchor="start">portão</text><path d="M630,505 C630,537 550,570 520,570" stroke="#2E9E4F" stroke-width="16" fill="none" stroke-linecap="round"/><text x="615" y="608" font-size="24" font-weight="800" fill="#2E9E4F" text-anchor="middle">Dirigir</text><path d="M520,570 C465,570 465,560 430,560" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="560" x2="430" y2="560" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="520" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Briefing e Sala de Situação</text><text x="410" y="538" font-size="13" fill="#3a3a3a" text-anchor="end">08h CG-1 · 10h briefing · CG comanda o</text><text x="410" y="552" font-size="13" fill="#3a3a3a" text-anchor="end">externo</text><path d="M520,570 C465,570 465,650 430,650" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="650" x2="430" y2="650" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="610" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Passagens</text><text x="410" y="628" font-size="13" fill="#3a3a3a" text-anchor="end">14h CG-2 · 16h T2 · 22h segurança privada ·</text><text x="410" y="642" font-size="13" fill="#3a3a3a" text-anchor="end">23h postura de saída</text><path d="M520,570 C465,570 465,740 430,740" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="740" x2="430" y2="740" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="700" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Interface com órgãos</text><text x="410" y="718" font-size="13" fill="#3a3a3a" text-anchor="end">CET · PMESP · GCM · ViaMobilidade ·</text><text x="410" y="732" font-size="13" fill="#3a3a3a" text-anchor="end">SPTrans</text><path d="M520,570 C465,570 465,830 430,830" stroke="#2E9E4F" stroke-width="3" fill="none"/><line x1="110" y1="830" x2="430" y2="830" stroke="#2E9E4F" stroke-width="3"/><text x="410" y="790" font-size="17" font-weight="700" fill="#2E9E4F" text-anchor="end">Liderança em campo</text><text x="410" y="808" font-size="13" fill="#3a3a3a" text-anchor="end">Coord. Geral · Coord. de Acessos ·</text><text x="410" y="822" font-size="13" fill="#3a3a3a" text-anchor="end">produtor de portão</text><path d="M770,505 C770,537 850,570 880,570" stroke="#B5223B" stroke-width="16" fill="none" stroke-linecap="round"/><text x="785" y="608" font-size="24" font-weight="800" fill="#B5223B" text-anchor="middle">Organizar</text><path d="M880,570 C935,570 935,546 970,546" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="546" x2="1290" y2="546" stroke="#B5223B" stroke-width="3"/><text x="990" y="520" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Estrutura</text><text x="990" y="538" font-size="13" fill="#3a3a3a" text-anchor="start">2 frentes · 2 canais de rádio</text><path d="M880,570 C935,570 935,650 970,650" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="650" x2="1290" y2="650" stroke="#B5223B" stroke-width="3"/><text x="990" y="610" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Equipe · 84 por dia</text><text x="990" y="628" font-size="13" fill="#3a3a3a" text-anchor="start">2 CG · 8 supervisores · 70 controladores</text><text x="990" y="642" font-size="13" fill="#3a3a3a" text-anchor="start">+ 4 produtores de portão (organização)</text><path d="M880,570 C935,570 935,740 970,740" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="740" x2="1290" y2="740" stroke="#B5223B" stroke-width="3"/><text x="990" y="700" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Sistemas</text><text x="990" y="718" font-size="13" fill="#3a3a3a" text-anchor="start">autoridade (níveis) · atividade (RACI) ·</text><text x="990" y="732" font-size="13" fill="#3a3a3a" text-anchor="start">comunicação</text><path d="M880,570 C935,570 935,816 970,816" stroke="#B5223B" stroke-width="3" fill="none"/><line x1="970" y1="816" x2="1290" y2="816" stroke="#B5223B" stroke-width="3"/><text x="990" y="790" font-size="17" font-weight="700" fill="#B5223B" text-anchor="start">Base de operação</text><text x="990" y="808" font-size="13" fill="#3a3a3a" text-anchor="start">Sala de Situação · praça do Portão 7</text><circle cx="700" cy="450" r="108" fill="url(#cg)" stroke="#5f67c4" stroke-width="3"/><text x="700" y="432" font-size="19" font-weight="800" text-anchor="middle" fill="#fff">Operação externa</text><text x="700" y="454" font-size="19" font-weight="800" text-anchor="middle" fill="#fff">e acessos</text><text x="700" y="487" font-size="12" text-anchor="middle" fill="#fff">Primavera Sound 2026</text><text x="700" y="504" font-size="11" text-anchor="middle" fill="#eef">ciclo contínuo e interativo</text><text x="700" y="862" font-size="14" text-anchor="middle" fill="#555">Planejado → Organizado → Dirigido → Controlado → Executado  ·  o controle realimenta o planejamento (debriefing 01h45 e 10h do D2)</text></svg></div>
 <div class="mmleg"><span style="color:#1F3A93"><b>Planejar</b>: o que será feito e quando</span><span style="color:#B5223B"><b>Organizar</b>: estrutura e sistemas</span><span style="color:#2E9E4F"><b>Dirigir</b>: fazer acontecer em campo</span><span style="color:#A3198C"><b>Controlar</b>: medir e corrigir</span></div>
 </section>
 
@@ -271,25 +415,19 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <div class="stack">
 <details open><summary>Direção Rizz · interlocução com órgãos <span class="badge rz">1</span></summary>
 <p><b>Missão:</b> responde pela Rizz perante a organização e os órgãos.<br><b>Faz:</b> reuniões e acordos com órgãos; formalização por e-mail; aprovação do plano operacional externo; cobertura das pausas da Coordenação Geral.<br><b>Decide:</b> escalonamento da Rizz, extensão de jornada, o que a Rizz assume. <b>Reporta a:</b> organização. <b>Rádio:</b> Canal 1 e escalonamento.</p></details>
-<details><summary>Coordenação Geral Externa <span class="badge rz">1 por turno</span></summary>
-<p><b>Missão:</b> comanda o externo a partir da praça do Portão 7.<br><b>Faz:</b> opera a Sala de Situação; é o ponto focal da linha de comunicação; consolida a leitura do entorno (estação, ônibus, vias, filas); aciona órgãos e terceiros; informa o CCO.<br><b>Decide:</b> nível 1 no externo e acionamento de planos externos. <b>Reporta a:</b> Direção. <b>Rádio:</b> Canal 1 (dona).</p></details>
-<details><summary>Produtor CET diurno <span class="badge rz">1</span></summary>
-<p><b>Missão:</b> alinha com os gestores da CET e acompanha o serviço de bloqueio.<br><b>Faz:</b> confere implantação dos bloqueios e sinalização contra o plano; orienta a empresa contratada; reporta desvios. <b>Reporta a:</b> Coordenação Geral. <b>Horário:</b> 07h–17h (D1) e 09h–19h (D2).<br><span class="badge pd">Cobertura de saída</span> a partir das 17h (D1) e 19h (D2) a operação da CET de saída fica com o Produtor CET de saída (abaixo).</p></details>
-<details><summary>Produtor CET de saída <span class="badge ok">aprovado · 1</span></summary>
-<p><b>Turno sugerido:</b> 17h00–02h00 nos dois dias (9 h de presença, dentro das 10 h).<br><b>Por quê:</b> entra no momento em que o Produtor CET diurno sai (D1, 17h) ou ainda com 2 h de sobreposição (D2, até 19h), acompanha a preparação da saída antes do pico e fica até a dispersão (00h30) e a normalização das vias.<br><b>Faz:</b> confere com os gestores da CET a mudança de operação de chegada para saída (bolsões de ônibus, táxi e embarque/desembarque, vias liberadas e fechadas); acompanha a dosagem de pedestres do Portão G à Estação Autódromo; acompanha a empresa de bloqueio; reporta desvios à Coordenação Geral.<br><b>Reporta a:</b> Coordenação Geral. <b>Rádio:</b> Canal 1.<br><b>Alternativa sem reforço:</b> estender o Produtor CET diurno até 02h (excede 10 h de presença; não recomendado) ou a Coordenação Geral do T2 acompanhar sozinha a CET (perde a Sala de Situação).</p></details>
+<details><summary>Coordenação Geral Externa <span class="badge rz">2 · 12 h cada</span></summary>
+<p><b>Turnos:</b> CG-1 08h–20h e CG-2 14h–02h, com sobreposição das 14h às 20h.<br><b>Missão:</b> comanda o externo a partir da praça do Portão 7.<br><b>Faz:</b> opera a Sala de Situação; é o ponto focal da linha de comunicação; consolida a leitura do entorno (estação, ônibus, vias, filas); acompanha com os gestores da CET a implantação do bloqueio (CG-1, de manhã) e a operação de saída (CG-2, à noite); aciona órgãos e terceiros; informa o CCO.<br><b>Decide:</b> nível 1 no externo e acionamento de planos externos. <b>Reporta a:</b> Direção. <b>Rádio:</b> Canal 1 (dona).</p></details>
 <details><summary>Coordenação de Acessos · supervisores <span class="badge rz">8 · 4 por turno</span></summary>
-<p><b>Missão:</b> comanda portões e controle interno, sem ficar fixos nos portões.<br><b>Supervisor-líder (1):</b> fica no CCO, voz da Coordenação de Acessos, sai só para ocorrência.<br><b>Supervisores de setor (2):</b> volantes nas áreas frágeis do seu setor, com ponto de encontro fixo.<br><b>Supervisor de base (1):</b> recebe da produção rádios, baterias, água e uniformes na praça do Portão 7; faz check-in/out da equipe; cobre Z e 7 antes das 14h (T1) e a saída por G e 8 depois das 23h (T2).<br><b>Decide:</b> nível 1 em portões e controle interno; remanejamento de controladores. <b>Reporta a:</b> Direção. <b>Rádio:</b> Canal 2.</p></details>
-<details><summary>Produtores de portão G, 8, Z e 7 <span class="badge rz">4 · 12 h</span></summary>
+<p><b>Missão:</b> comanda portões e controle interno, sem ficar fixos nos portões.<br><b>Supervisor-líder (1):</b> fica no CCO, voz da Coordenação de Acessos, sai só para ocorrência.<br><b>Supervisores de setor (2):</b> volantes nas áreas frágeis do seu setor, com ponto de encontro fixo.<br><b>Supervisor de base (1):</b> recebe da produção rádios, baterias, água e kits na praça do Portão 7; faz check-in/out da equipe; cobre Z e 7 antes das 14h (T1) e a saída por G e 8 depois das 23h (T2).<br><b>Decide:</b> nível 1 em portões e controle interno; remanejamento de controladores. <b>Reporta a:</b> Direção. <b>Rádio:</b> Canal 2.</p></details>
+<details><summary>Produtores de portão G, 8, Z e 7 <span class="badge rz">4 · 12 h</span> <span class="badge org">contratação da organização</span></summary>
 <table><tr><th>Portão</th><th>Característica</th><th>Responsabilidade principal</th></tr>
 <tr><td><b>G</b></td><td>Maior fila</td><td>Abertura em blocos, ritmo, interface com validação, segurança privada e orientação externa</td></tr>
 <tr><td><b>8</b></td><td>Acesso a pé, PCD (12h15), transfer VIP</td><td>Fluxos segregados; PCD; transfer VIP fora do fluxo de pedestres</td></tr>
 <tr><td><b>Z</b></td><td>Fornecedores, carga, shuttle e transfer VIP</td><td>Triagem por voucher e bloqueio; baia fora da via; modo offline</td></tr>
 <tr><td><b>7</b></td><td>Artistas e credenciados</td><td>Triagem por credencial antecipada; balcão de exceção</td></tr></table>
-<p style="margin-top:8px"><b>Horário:</b> 10h–22h. <b>Às 22h</b> a segurança privada da organização assume o interior do portão, com passagem registrada (produtor → chefe de segurança do portão, supervisor presente). <b>Reportam a:</b> Coordenação de Acessos.<br><span class="badge pd">Cobertura da saída</span> a saída do público começa antes do fim do turno de 22h para quem sai cedo e se concentra após o último show (00h30). Por isso há produtores de saída em G e 8.</p></details>
-<details><summary>Produtores de saída G e 8 <span class="badge ok">aprovado · 2</span></summary>
-<p><b>Turno sugerido:</b> 18h00–02h00 (8 h), com sobreposição de 4 h com o produtor do dia para a passagem de contexto.<br><b>Por quê:</b> G leva o fluxo à estação (mais crítico) e 8 leva aos bolsões de aplicativo, táxi e ônibus; é onde a saída pode travar. Z e 7 (shuttle VIP e artistas) ficam cobertos pelo supervisor de base e pelos controladores do T2.<br><b>Faz:</b> dosagem em blocos no portão quando a vazão da estação ou dos bolsões travar, ajuste com Coordenação Geral e Produtor CET de saída, passagem registrada à segurança privada.<br><b>Reporta a:</b> Coordenação de Acessos. <b>Rádio:</b> Canal 2, com ponte ao Canal 1.<br><b>Alternativa sem reforço:</b> produtores de G e 8 passam a 14h–02h; 10h–14h fica com o supervisor de base e a orientação externa, mas a fila do G se forma muito antes da abertura.</p></details>
-<details><summary>Controladores de acesso <span class="badge rz">60 · 30 por turno</span></summary>
-<p><b>Missão:</b> conferência de credencial nos pontos internos e triagem de Z e 7.<br><b>Faz:</b> confere pela matriz da organização; bloqueia até a conferência em Z e 7; dúvida vai à baia ou ao balcão. <b>Não faz:</b> revista nem contenção física. <b>Reporta a:</b> supervisor da zona.</p></details>
+<p style="margin-top:8px"><b>Contratação:</b> pela organização; a Rizz responde pela produção dos portões, define perfil e briefing e coordena em campo.<br><b>Horário:</b> 10h–22h. <b>Às 22h</b> a segurança privada da organização assume o interior do portão, com passagem registrada (produtor → chefe de segurança do portão, supervisor presente). <b>Reportam a:</b> Coordenação de Acessos.<br><span class="badge pd">Cobertura da saída</span> a saída do público começa antes do fim do turno de 22h para quem sai cedo e se concentra após o último show (00h30). Depois das 22h, a saída é acompanhada pelos supervisores e controladores do T2 e pela CG-2.</p></details>
+<details><summary>Controladores de acesso <span class="badge rz">70 · 35 por turno</span></summary>
+<p><b>Missão:</b> conferência de credencial nos pontos internos e triagem de Z e 7.<br><b>Faz:</b> confere pela matriz da organização; bloqueia até a conferência em Z e 7; dúvida vai à baia ou ao balcão. <b>Contratação:</b> Rizz, só nos dias de evento, com instrução no próprio dia antes do turno. <b>Não faz:</b> revista nem contenção física. <b>Reporta a:</b> supervisor da zona.</p></details>
 </div>
 
 <div class="sep"></div>
@@ -301,22 +439,22 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <tr><td>Licenças e documentação junto aos órgãos</td><td>Organização</td><td>Organização</td><td>Rizz (informação operacional)</td><td>Direção Rizz</td></tr>
 <tr><td>Linha de comunicação do externo (ponto focal)</td><td>Coord. Geral</td><td>Coord. Geral</td><td>Órgãos e terceiros</td><td>CCO</td></tr>
 <tr><td>Estrutura da praça do Portão 7</td><td>Produção da organização</td><td>Organização</td><td>Coord. Geral</td><td>Direção Rizz</td></tr>
-<tr><td>Posto de comando da PM (praça do Portão A)</td><td>PM</td><td>PM</td><td>Coord. Geral</td><td>Direção Rizz</td></tr>
-<tr><td>Bloqueio viário (cavaletes, cones)</td><td>Empresa contratada pela organização</td><td>Organização</td><td>Produtor CET, CET</td><td>Coord. Geral</td></tr>
-<tr><td>Acompanhamento do bloqueio contra o plano (dia e saída)</td><td>Produtor CET (diurno e de saída)</td><td>Coord. Geral</td><td>Gestores da CET</td><td>Direção</td></tr>
-<tr><td>Operação de saída: bolsões, estação, dosagem de pedestres</td><td>Produtor CET de saída, produtores de saída G e 8</td><td>Coord. Geral</td><td>CET, ViaMobilidade, SPTrans</td><td>CCO</td></tr>
+<tr><td>Base da PM (Cia ao lado do Portão A)</td><td>PM</td><td>PM</td><td>Coord. Geral</td><td>Direção Rizz</td></tr>
+<tr><td>Bloqueio viário (cavaletes, cones)</td><td>Empresa contratada pela organização</td><td>Organização</td><td>Coord. Geral, CET</td><td>Direção</td></tr>
+<tr><td>Acompanhamento do bloqueio contra o plano (dia e saída)</td><td>Coord. Geral (CG-1 de manhã, CG-2 à noite)</td><td>Coord. Geral</td><td>Gestores da CET</td><td>Direção</td></tr>
+<tr><td>Operação de saída: bolsões, estação, dosagem de pedestres</td><td>CG-2, supervisores e controladores do T2</td><td>Coord. Geral</td><td>CET, ViaMobilidade, SPTrans</td><td>CCO</td></tr>
 <tr><td>Orientação externa do público</td><td>Orientação externa (organização)</td><td>Organização</td><td>Produtores de portão</td><td>Coord. Geral</td></tr>
 <tr><td>Monitores da estação / ônibus</td><td>ViaMobilidade / SPTrans</td><td>Cada operadora</td><td>Coord. Geral</td><td>Sala de Situação</td></tr>
-<tr><td>Produção dos portões G, 8, Z e 7</td><td>Produtor de cada portão</td><td>Coord. de Acessos</td><td>Segurança privada, validação</td><td>Coord. Geral</td></tr>
+<tr><td>Produção dos portões G, 8, Z e 7</td><td>Produtor de cada portão (contratado pela organização)</td><td>Coord. de Acessos</td><td>Segurança privada, validação</td><td>Coord. Geral</td></tr>
 <tr><td>Validação de ingresso em G e 8</td><td>Validação (organização)</td><td>Organização</td><td>Produtor de portão</td><td>Coord. de Acessos</td></tr>
 <tr><td>Triagem e bloqueio em Z e 7</td><td>Controladores</td><td>Produtor de Z e de 7</td><td>Credenciamento da organização</td><td>Coord. de Acessos</td></tr>
-<tr><td>Regra de voucher e matriz de credenciais</td><td>Organização</td><td>Organização</td><td>Coord. de Acessos</td><td>Equipe Rizz (treinamento)</td></tr>
+<tr><td>Regra de voucher e matriz de credenciais</td><td>Organização</td><td>Organização</td><td>Coord. de Acessos</td><td>Equipe Rizz (instrução no dia)</td></tr>
 <tr><td>Controle de acesso interno</td><td>Controladores</td><td>Coord. de Acessos</td><td>Segurança privada</td><td>CCO</td></tr>
 <tr><td>Segurança dos portões para dentro e após as 22h</td><td>Segurança privada</td><td>Organização</td><td>Produtor de portão, supervisor</td><td>Coord. de Acessos</td></tr>
 <tr><td>Nível 1 no externo</td><td>Coord. Geral</td><td>Coord. Geral</td><td>Órgãos</td><td>CCO (até 5 min)</td></tr>
 <tr><td>Nível 1 em portões e controle interno</td><td>Coord. de Acessos</td><td>Coord. de Acessos</td><td>Produtor do portão</td><td>CCO</td></tr>
 <tr><td>Níveis 2 e 3</td><td>Organização (CCO, diretor de crise)</td><td>Organização</td><td>Direção Rizz, Coord. Geral, Coord. de Acessos</td><td>Órgãos</td></tr>
-<tr><td>Treinamento da equipe Rizz</td><td>Coord. de Acessos e Coord. Geral</td><td>Direção Rizz</td><td>Organização (matriz)</td><td>Equipe Rizz</td></tr>
+<tr><td>Instrução da equipe no dia (sem treinamento prévio)</td><td>Coord. de Acessos e Coord. Geral</td><td>Direção Rizz</td><td>Organização (matriz)</td><td>Equipe Rizz</td></tr>
 </table></div>
 </section>
 
@@ -341,7 +479,7 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <rect x="290" y="90" width="260" height="370" fill="#F6EDD6" stroke="#8A6A1F" stroke-dasharray="5 4"/>
 <text x="420" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#8A6A1F">CAMINHADA SEGURA / VIÁRIO</text>
 <text x="420" y="138" text-anchor="middle" font-size="11" fill="#3A3A3A">Bloqueio: empresa da organização</text>
-<text x="420" y="154" text-anchor="middle" font-size="11" fill="#3A3A3A">Acompanha: Produtor CET (diurno)</text>
+<text x="420" y="154" text-anchor="middle" font-size="11" fill="#3A3A3A">Acompanha: Coordenação Geral, com a CET</text>
 <text x="420" y="170" text-anchor="middle" font-size="11" fill="#3A3A3A">Orientação externa: organização</text>
 <g stroke="#0B6E4F" stroke-width="2.5" fill="none" marker-end="url(#ar)">
 <path d="M230,125 L288,125"/><path d="M230,230 L288,230"/><path d="M230,330 L288,330"/><path d="M230,430 L288,430"/>
@@ -355,12 +493,12 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <!-- praca 7 -->
 <rect x="740" y="470" width="400" height="90" fill="#111" opacity=".95"/>
 <text x="940" y="498" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">PRAÇA DO PORTÃO 7 · Sala de Situação Rizz</text>
-<text x="940" y="518" text-anchor="middle" fill="#ddd" font-size="11">Coordenação Geral · supervisor de base · órgãos (GCM e demais) · oficial de ligação da PM (solicitado)</text>
+<text x="940" y="518" text-anchor="middle" fill="#ddd" font-size="11">Coordenação Geral · supervisor de base · órgãos (GCM e demais)</text>
 <text x="940" y="538" text-anchor="middle" fill="#bbb" font-size="11">Estrutura montada pela organização · Rizz opera a Sala de Situação</text>
 <!-- CCO -->
 <rect x="800" y="150" width="300" height="70" fill="#E1ECF6" stroke="#1F4E79"/><text x="950" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#1F4E79">CCO da organização</text><text x="950" y="198" text-anchor="middle" font-size="11" fill="#3A3A3A">Supervisor-líder Rizz presente · níveis 2 e 3</text>
 <!-- Portao A / PM -->
-<rect x="290" y="500" width="260" height="70" fill="#FFF" stroke="#9a9a92"/><text x="420" y="528" text-anchor="middle" font-size="14" font-weight="700">Portão A · praça do batalhão</text><text x="420" y="548" text-anchor="middle" font-size="11" fill="#62665F">Posto de comando da PM · sem base montada pela Rizz</text>
+<rect x="290" y="500" width="260" height="70" fill="#FFF" stroke="#9a9a92"/><text x="420" y="528" text-anchor="middle" font-size="14" font-weight="700">Portão A · Cia da PM ao lado</text><text x="420" y="548" text-anchor="middle" font-size="11" fill="#62665F">Base da PM · alinhamento operacional depois de 16/11</text>
 <path d="M550,535 L738,515" stroke="#9a9a92" stroke-dasharray="4 4" fill="none"/>
 <text x="650" y="540" font-size="10" fill="#62665F">ligação PM ↔ Sala de Situação</text>
 <!-- rótulos -->
@@ -371,8 +509,8 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 </svg></div>
 
 <div class="grid g3" style="margin-top:16px">
-<div class="card hl"><h3>Zona 1 · Externo</h3><p><b>Rizz:</b> Coordenação Geral, Produtor CET.<br><b>Foco:</b> vazão da estação e dos ônibus, viário, bolsões, fila na caminhada.<br><b>Sinais de alerta:</b> estação lotada, bloqueio fora do plano, fila chegando à via.</p></div>
-<div class="card hl"><h3>Zona 2 · Portões</h3><p><b>Rizz:</b> 4 produtores de portão.<br><b>Foco:</b> abertura em blocos, filas, PCD, VIP, voucher, passagem para a segurança privada às 22h.<br><b>Sinais de alerta:</b> fila acima do limite do plano, falha de validação, offline em Z e 7.</p></div>
+<div class="card hl"><h3>Zona 1 · Externo</h3><p><b>Rizz:</b> Coordenação Geral (CG-1 e CG-2).<br><b>Foco:</b> vazão da estação e dos ônibus, viário, bolsões, fila na caminhada.<br><b>Sinais de alerta:</b> estação lotada, bloqueio fora do plano, fila chegando à via.</p></div>
+<div class="card hl"><h3>Zona 2 · Portões</h3><p><b>Rizz:</b> produção dos portões, com 4 produtores contratados pela organização.<br><b>Foco:</b> abertura em blocos, filas, PCD, VIP, voucher, passagem para a segurança privada às 22h.<br><b>Sinais de alerta:</b> fila acima do limite do plano, falha de validação, offline em Z e 7.</p></div>
 <div class="card hl"><h3>Zona 3 · Interno</h3><p><b>Rizz:</b> supervisores de setor e controladores.<br><b>Foco:</b> áreas frágeis mapeadas em planta, credenciais por zona, pausas e remanejamento.<br><b>Sinais de alerta:</b> tentativa de acesso indevido, adensamento, atraso de pausa.</p></div>
 </div>
 <div class="card wn" style="margin-top:16px"><b>Em definição neste mapa:</b> traçado exato do Portão 8, rótulo do Portão G, pontos fixos e áreas frágeis dos supervisores volantes, local de cada controlador. Depende da planta oficial e do mapeamento de acessos com a organização.</div>
@@ -381,87 +519,82 @@ footer{border-top:1px solid var(--ln);padding:20px 0;color:var(--mu);font-size:1
 <!-- 5 DIA -->
 <section class="tab" id="t5">
 <h2>Dia da operação</h2>
-<p class="mu">D1 (sáb 05/12) e D2 (dom 06/12) com o mesmo desenho. A "presença" de 10 h inclui a pausa. Barras amarelas são os reforços de saída aprovados.</p>
+<p class="mu">D1 (sáb 05/12) e D2 (dom 06/12) com o mesmo desenho. A "presença" de 10 h ou 12 h inclui a pausa.</p>
 <div class="ax"><span style="left:0.0%">07h</span><span style="left:15.8%">10h</span><span style="left:28.9%">12h30</span><span style="left:47.4%">16h</span><span style="left:68.4%">20h</span><span style="left:84.2%">23h</span><span style="left:100.0%">02h</span></div>
 <div class="bars" style="margin:6px 0 18px">
 <div class="bar"><span>Público no evento</span><div class="t"><i class="bl" style="left:28.9%;width:63.2%">12h30 abertura · 13h 1ª atração · 00h30 término</i></div></div>
-<div class="bar"><span>Produtor CET diurno (D1)</span><div class="t"><i class="" style="left:0.0%;width:52.6%">07h–17h</i></div></div>
-<div class="bar"><span>Produtor CET diurno (D2)</span><div class="t"><i class="" style="left:10.5%;width:52.7%">09h–19h</i></div></div>
-<div class="bar"><span>Produtor CET de saída</span><div class="t"><i class="pr" style="left:52.6%;width:47.4%">17h–02h (aprovado)</i></div></div>
-<div class="bar"><span>Produtores de portão</span><div class="t"><i class="" style="left:15.8%;width:63.1%">10h–22h</i></div></div>
-<div class="bar"><span>Produtores de saída G e 8</span><div class="t"><i class="pr" style="left:57.9%;width:42.1%">18h–02h (aprovado)</i></div></div>
+<div class="bar"><span>CG-1 · Coordenação Geral</span><div class="t"><i class="" style="left:5.3%;width:63.1%">08h–20h</i></div></div>
+<div class="bar"><span>CG-2 · Coordenação Geral</span><div class="t"><i class="" style="left:36.8%;width:63.2%">14h–02h</i></div></div>
+<div class="bar"><span>Produtores de portão (organização)</span><div class="t"><i class="" style="left:15.8%;width:63.1%">10h–22h</i></div></div>
 <div class="bar"><span>Turno 1</span><div class="t"><i class="b2" style="left:15.8%;width:52.6%">10h–20h</i></div></div>
 <div class="bar"><span>Turno 2 (cobre a saída)</span><div class="t"><i class="b2" style="left:47.4%;width:52.6%">16h–02h</i></div></div>
 <div class="bar"><span>Segurança privada nos portões</span><div class="t"><i class="bl" style="left:78.9%;width:21.1%">22h→ passagem</i></div></div>
 </div>
 <div class="grid g2">
 <div class="card"><h3>Linha do tempo operacional</h3><div class="tl">
-<div><b>07:00</b> Produtor CET diurno em campo: confere implantação do bloqueio contra o plano.</div>
+<div><b>08:00</b> CG-1 em campo: abre a Sala de Situação e confere com a CET a implantação do bloqueio contra o plano.</div>
 <div><b>09:30</b> Supervisor de base T1 na praça do Portão 7: material, rádios, baterias e check-in da equipe.</div>
-<div><b>10:00</b> T1 e produtores de portão em posição. Sala de Situação aberta. Briefing. A fila do G já começa a se formar (público chega muito antes da abertura).</div>
+<div><b>10:00</b> T1 e produtores de portão em posição. Briefing e instrução dos controladores do T1 no início do turno. A fila do G já começa a se formar (público chega muito antes da abertura).</div>
 <div><b>12:15</b> Abertura antecipada PCD pelo Portão 8 (15 min antes da abertura oficial; confirmar com a produção).</div>
 <div><b>12:30</b> Abertura dos portões ao público geral. <b>13:00</b> primeira atração. Z e 7 cobertos pelo supervisor de base até 14h.</div>
-<div><b>16:00–17:00</b> Passagem T1 → T2, inventário entregue × devolvido, troca de baterias.</div>
-<div><b>17:00</b> Produtor CET de saída (aprovado) assume com a CET a preparação da saída.</div>
-<div><b>18:00</b> Produtores de saída G e 8 (aprovados) entram em sobreposição.</div>
-<div><b>20:00</b> T1 encerra. T2 segue com 30 controladores e 4 supervisores.</div>
+<div><b>14:00</b> CG-2 entra; as duas Coordenações Gerais trabalham juntas até as 20h.</div>
+<div><b>16:00–17:00</b> T2 entra com instrução dos controladores no início do turno; passagem T1 → T2, inventário e troca de baterias.</div>
+<div><b>20:00</b> T1 e CG-1 encerram. T2 segue com 35 controladores, 4 supervisores e a CG-2, que acompanha com a CET a preparação da saída.</div>
 <div><b>22:00</b> Produtores do dia encerram; segurança privada assume o interior dos portões, com passagem registrada.</div>
 <div><b>23:00</b> <b>Mudança de postura do T2 para a saída</b> (detalhe abaixo).</div>
-<div><b>00:30</b> Término das atividades e dispersão. Trens e metrô funcionam 24 h.</div>
-<div><b>02:00</b> T2, produtores e CET de saída encerram. Relatório escrito de D1 às 01:45.</div>
+<div><b>00:30</b> Término das atividades e dispersão. Operação de trens e metrô na madrugada a confirmar com as concessionárias.</div>
+<div><b>02:00</b> T2 e CG-2 encerram. Relatório escrito de D1 às 01:45.</div>
 <div><b>D2 10:00</b> Debriefing completo de D1; mesmo desenho.</div></div></div>
 <div class="card"><h3>Efetivo por período</h3>
 <table><tr><th>Grupo</th><th>T1</th><th>T2</th><th>Total/dia</th></tr>
-<tr><td>Coordenação Geral Externa</td><td>1</td><td>1</td><td>2</td></tr>
-<tr><td>Produtor CET diurno</td><td colspan="2">07h–17h / 09h–19h</td><td>1</td></tr>
-<tr><td>Produtores de portão</td><td colspan="2">10h–22h</td><td>4</td></tr>
+<tr><td>Coordenação Geral Externa</td><td>08h–20h</td><td>14h–02h</td><td>2</td></tr>
 <tr><td>Supervisores</td><td>4</td><td>4</td><td>8</td></tr>
-<tr><td>Controladores</td><td>30</td><td>30</td><td>60</td></tr>
-<tr><th>Base decidida</th><th></th><th></th><th>75</th></tr>
-<tr style="background:var(--wl)"><td>Produtor CET de saída (aprovado)</td><td colspan="2">17h–02h</td><td>+1</td></tr>
-<tr style="background:var(--wl)"><td>Produtores de saída G e 8 (aprovados)</td><td colspan="2">18h–02h</td><td>+2</td></tr>
-<tr><th>Com o reforço aprovado</th><th></th><th></th><th>78</th></tr></table>
-<p class="mu" style="margin-top:8px">Mais a Direção. Reservas nominais em sobreaviso. Desmobilização de 07/12 com equipe reduzida.</p>
-<p><b>Amparo:</b> kit lanche aos controladores; alimentação da equipe de gestão em definição; hidratação pela produção.</p></div>
+<tr><td>Controladores</td><td>35</td><td>35</td><td>70</td></tr>
+<tr><th>Contratação Rizz</th><th></th><th></th><th>80</th></tr>
+<tr><td>Produtores de portão (organização)</td><td colspan="2">10h–22h</td><td>4</td></tr>
+<tr><th>Em campo sob coordenação Rizz</th><th></th><th></th><th>84</th></tr></table>
+<p class="mu" style="margin-top:8px">Mais a Direção. Time confirmado, sem reservas contratadas; pessoas indicadas cobrem falta. Sem desmobilização da equipe Rizz em 07/12.</p>
+<p><b>Amparo:</b> kit lanche aos controladores pela produção (140); alimentação da coordenação e da supervisão em definição; hidratação pela produção em copos de 200 ml (5.456 de 03 a 06/12).</p></div>
 </div>
 
 <div class="sep"></div>
 <h2>Plano de saída do público</h2>
 <p class="mu">Referência do caderno: término e dispersão às 00h30, até 40.000 pessoas. A saída começa a se formar a partir das 23h e se concentra após o último show. O T2 (16h–02h) já está em campo nesse período; a mudança é de postura.</p>
 <div class="grid g3">
-<div class="card hl"><h3>Do portão G à estação</h3><p>Fluxo mais crítico, a pé pela rota segregada por gradil (~850 m). Produtor de saída G dosa em blocos se a vazão da catraca da estação travar, em acordo com o ponto focal ViaMobilidade e a Coordenação Geral. Meta: nenhuma fila chegando à via.</p></div>
-<div class="card hl"><h3>Do portão 8 aos bolsões</h3><p>Aplicativo, táxi, ônibus e embarque/desembarque nos bolsões da CET. Produtor de saída 8 e Produtor CET de saída acompanham a reversão dos bolsões. Meta de referência: espera abaixo de 40 min.</p></div>
+<div class="card hl"><h3>Do portão G à estação</h3><p>Fluxo mais crítico, a pé pela rota com gradil (~850 m). Supervisores e controladores do T2 dosam em blocos se a vazão da catraca da estação travar, em acordo com o ponto focal ViaMobilidade e a Coordenação Geral. Meta: nenhuma fila chegando à via.</p></div>
+<div class="card hl"><h3>Do portão 8 aos bolsões</h3><p>Aplicativo, táxi, ônibus e embarque/desembarque nos bolsões da CET. A CG-2 acompanha com a CET a reversão dos bolsões. Meta de referência: espera abaixo de 40 min.</p></div>
 <div class="card hl"><h3>Z e 7 e áreas internas</h3><p>Shuttle VIP sai pelo estacionamento interno e pelo Z; artistas pelo 7. Rota de serviços é interrompida na saída do público. Supervisor de base e controladores do T2 cobrem.</p></div>
 </div>
 <div class="card" style="margin-top:14px"><h3>O que o T2 muda às 23h</h3><ul>
-<li><b>Controladores T2:</b> parte dos 30 deixa pontos internos de menor risco e vai para a dosagem da saída (G e 8) e para o ponto de passagem à segurança privada; reposicionamento definido no mapeamento de pontos.</li>
+<li><b>Controladores T2:</b> parte dos 35 deixa pontos internos de menor risco e vai para a dosagem da saída (G e 8) e para o ponto de passagem à segurança privada; reposicionamento definido no mapeamento de pontos.</li>
 <li><b>Supervisores T2:</b> líder no CCO; os 2 de setor acompanham as áreas de saída; o de base cobre G e 8 depois das 23h e Z e 7.</li>
-<li><b>Coordenação Geral T2:</b> cruza leitura da estação, bolsões e vias com a Sala de Situação e a CET de saída.</li>
+<li><b>CG-2:</b> cruza leitura da estação, bolsões e vias com a Sala de Situação e com a CET.</li>
 <li><b>Debriefing:</b> relatório escrito às 01h45 em D1.</li></ul></div>
 </section>
 
 <!-- 6 COMUNICACAO -->
 <section class="tab" id="t6">
 <h2>Comunicação e rádios</h2>
-<p class="lead">Dois canais Rizz: <b>Canal 1</b> para o externo e os órgãos; <b>Canal 2</b> para acessos. A Rizz é o ponto focal da linha de comunicação. Os rádios são da produção; o dimensionamento por ponto está em avaliação.</p>
+<p class="lead">Dois canais Rizz: <b>Canal 1</b> para o externo e os órgãos; <b>Canal 2</b> para acessos. A Rizz é o ponto focal da linha de comunicação. Os rádios são da produção: <b>20 aparelhos</b>; nem todo controlador usa rádio.</p>
 <div class="grid g2">
 <div class="card"><h3>Canais</h3><table>
 <tr><th>Canal</th><th>Dono</th><th>Quem fala</th></tr>
-<tr><td><b>1 · Externo e órgãos</b></td><td>Coordenação Geral</td><td>Direção, Coord. Geral, Produtor CET; ponte com ponto focal de órgãos <span class="badge pd">a definir</span></td></tr>
-<tr><td><b>2 · Acessos</b></td><td>Coordenação de Acessos</td><td>Supervisores, produtores de portão, controladores (por ponto)</td></tr>
+<tr><td><b>1 · Externo e órgãos</b></td><td>Coordenação Geral</td><td>Direção, CG-1 e CG-2; ponte com ponto focal de órgãos <span class="badge pd">a definir</span></td></tr>
+<tr><td><b>2 · Acessos</b></td><td>Coordenação de Acessos</td><td>Supervisores, produtores de portão, controladores-referência</td></tr>
 <tr><td><b>Apoio</b></td><td>Organização</td><td>Canais de produção, CCO e segurança privada <span class="badge pd">a confirmar</span></td></tr></table></div>
-<div class="card"><h3>Quem leva rádio · a avaliar com a produção</h3>
-<table><tr><th>Função</th><th>Proposta</th></tr>
-<tr><td>Direção, Coord. Geral, Produtores CET (diurno e de saída)</td><td>1 por pessoa</td></tr>
-<tr><td>Produtores de portão (4, mais 2 de saída se aprovados)</td><td>1 por pessoa</td></tr>
-<tr><td>Supervisores (4 por turno)</td><td>1 por pessoa</td></tr>
-<tr><td>Controladores</td><td><span class="badge pd">por ponto</span> mínimo de 1 por ponto fixo e por zona; total depende do mapeamento. Pedido inicial: 1 por pessoa até fechar.</td></tr>
-<tr><td>Chefes de segurança dos portões</td><td><span class="badge pd">decisão da produção</span> +4 no Canal 2</td></tr></table>
-<p class="mu" style="margin-top:8px">Pico simultâneo de referência (1 por pessoa): 76 aparelhos. Com 1 por ponto o número cai; será definido após o mapeamento em planta. Bateria extra por aparelho, técnico de plantão e teste nos ensaios de 25 e 26/11.</p></div>
+<div class="card"><h3>Quem leva rádio · 20 aparelhos</h3>
+<table><tr><th>Função</th><th>Canal</th><th>Aparelhos</th></tr>
+<tr><td>Coordenação Geral (CG-1 e CG-2)</td><td>1</td><td>2</td></tr>
+<tr><td>Direção</td><td>1</td><td>1</td></tr>
+<tr><td>Produtores de portão</td><td>2</td><td>4</td></tr>
+<tr><td>Supervisores (4 por turno)</td><td>2</td><td>8</td></tr>
+<tr><td>Controladores-referência</td><td>2</td><td>5</td></tr>
+<tr><th>Total</th><th></th><th>20</th></tr></table>
+<p class="mu" style="margin-top:8px">Bateria extra por aparelho e técnico de plantão da produção. Testes de rádio e canal pela produção e pela supervisão em 03 e 04/12. Chefes de segurança dos portões no Canal 2: decisão da produção, fora dos 20.</p></div>
 </div>
 <div class="card" style="margin-top:16px"><h3>Fluxo da informação</h3>
 <p>Ocorrência no ponto → <b>controlador</b> → <b>supervisor de setor</b> (Canal 2) → <b>supervisor-líder no CCO</b> → organização.<br>
-Ocorrência no externo → <b>Produtor CET / ponto focal do órgão</b> → <b>Coordenação Geral</b> (Sala de Situação, Canal 1) → <b>CCO</b> (até 5 min no nível 1).<br>
+Ocorrência no externo → <b>ponto focal do órgão</b> → <b>Coordenação Geral</b> (Sala de Situação, Canal 1) → <b>CCO</b> (até 5 min no nível 1).<br>
 Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 </section>
 
@@ -486,12 +619,13 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <li>Passagem às 22h e saída a partir das 23h sem produtor no portão</li>
 <li>Retorno da equipe após 02h</li></ul></div>
 <div class="card"><h3>Mitigações já definidas</h3><ul>
-<li>Reservas nominais (16) e sobreaviso nas funções-chave</li>
+<li>Time confirmado; pessoas indicadas cobrem falta</li>
+<li>Coordenação Geral em 12 h, com sobreposição das 14h às 20h</li>
 <li>Pausas escalonadas; Direção cobre a Coordenação Geral</li>
 <li>Supervisor de base cobre Z e 7 e a saída por G e 8</li>
-<li>Ensaio de 25 e 26/11 como teste de aceite dos canais e rádios</li>
+<li>Testes de rádio e canal pela produção e pela supervisão em 03 e 04/12</li>
 <li>Passagem registrada de portão para segurança privada</li>
-<li>Oficial de ligação da PM solicitado na Sala de Situação</li></ul></div>
+<li>Base da PM na Cia ao lado do Portão A; alinhamento operacional depois de 16/11</li></ul></div>
 </div>
 </section>
 
@@ -500,24 +634,17 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <h2>Cronograma até D1</h2>
 <div class="tw"><table>
 <tr><th>Data</th><th>Marco</th><th>Responsável</th></tr>
-<tr><td class="mono">até 06/11</td><td>Resposta escrita da produção: rádios, uniformes, hidratação, credenciais</td><td>Organização</td></tr>
-<tr><td class="mono">07/11</td><td>Turnos, pausas, jornada de 12 h e interjornada aprovados juridicamente</td><td>Rizz</td></tr>
-<tr><td class="mono">13/11</td><td>Lista nominal: 75 titulares + 16 reservas, tamanhos de camisa</td><td>Rizz</td></tr>
-<tr><td class="mono">16/11</td><td>Matriz de credenciais recebida (limite)</td><td>Organização</td></tr>
-<tr><td class="mono">20/11</td><td>Reconfirmação; escala e pausas aprovadas</td><td>Rizz</td></tr>
-<tr><td class="mono">21 a 24/11</td><td>Treinamento dos supervisores</td><td>Rizz</td></tr>
-<tr><td class="mono">24/11</td><td>Entrega do lote de rádios</td><td>Organização</td></tr>
-<tr><td class="mono"><b>25 e 26/11</b></td><td><b>Ensaio</b> do canal de acesso, da Sala de Situação e dos rádios (CET em 26/11)</td><td>Rizz e organização</td></tr>
-<tr><td class="mono">26/11</td><td>Entrega de uniformes</td><td>Organização</td></tr>
-<tr><td class="mono">27/11</td><td>Relatório do ensaio e ajustes</td><td>Rizz</td></tr>
-<tr><td class="mono"><b>28 e 29/11</b></td><td><b>Treinamento</b> dos controladores (T1 em 28; T2 em 29), com módulo de voucher para Z e 7</td><td>Rizz</td></tr>
-<tr><td class="mono">30/11</td><td>Reconfirmação de staff e reservas; fechar transporte pós 02h</td><td>Rizz</td></tr>
+<tr><td class="mono">até 06/11</td><td>Resposta escrita da produção: rádios, hidratação, kit lanche, credenciais e Sala de Situação</td><td>Organização</td></tr>
+<tr><td class="mono">07/11</td><td>Jornada de 12 h, interjornada e contrato intermitente dos controladores validados juridicamente</td><td>Rizz</td></tr>
+<tr><td class="mono"><b>16/11</b></td><td><b>Matriz de credenciais</b>; definição do uniforme; <b>início dos nomes e das contratações</b></td><td>Organização e Rizz</td></tr>
+<tr><td class="mono">17 a 21/11</td><td>Reunião de alinhamento operacional com a PM</td><td>Rizz e PM</td></tr>
+<tr><td class="mono">20/11</td><td>70 controladores selecionados</td><td>Rizz</td></tr>
+<tr><td class="mono">01/12</td><td>Convocação dos controladores para 05 e 06/12</td><td>Rizz</td></tr>
 <tr><td class="mono">02/12</td><td>Conferência de credenciais e zonas</td><td>Organização e Rizz</td></tr>
-<tr><td class="mono">03 e 04/12</td><td>Implantação; familiarização de toda a equipe em 04/12</td><td>Rizz</td></tr>
-<tr><td class="mono"><b>05 e 06/12</b></td><td><b>Operação</b></td><td>Todos</td></tr>
-<tr><td class="mono">07/12</td><td>Desmobilização e devolução de inventário</td><td>Rizz</td></tr>
+<tr><td class="mono"><b>03 e 04/12</b></td><td>Coordenação, supervisão e produtores de portão em campo: testes de rádio e canal, organização das informações</td><td>Rizz e produção</td></tr>
+<tr><td class="mono"><b>05 e 06/12</b></td><td><b>Operação</b>; controladores com instrução no próprio dia</td><td>Todos</td></tr>
 </table></div>
-<p class="mu" style="margin-top:8px">Datas internas da Rizz sujeitas a confirmação; entregas da organização dependem do aceite da produção.</p>
+<p class="mu" style="margin-top:8px">Sem ensaio, sem treinamento prévio e sem desmobilização da equipe Rizz. Datas internas da Rizz sujeitas a confirmação; entregas da organização dependem do aceite da produção.</p>
 </section>
 
 <!-- 9 PEDIDOS -->
@@ -526,11 +653,12 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <div class="grid g2">
 <div class="card hl"><h3>Pedidos à organização</h3><table>
 <tr><th>Item</th><th>Detalhe</th><th>Prazo</th></tr>
-<tr><td>Rádios</td><td>Dimensionamento por ponto a definir em conjunto; técnico de plantão; bateria extra</td><td>06/11</td></tr>
-<tr><td>Uniformes e coletes</td><td>4 identidades (acesso, coordenação, produção de portão, externo); 202 peças e 20 coletes de triagem como referência</td><td>06/11</td></tr>
-<tr><td>Hidratação</td><td>Referência de partida: 0,5 L por hora de presença</td><td>06/11</td></tr>
-<tr><td>Alimentação</td><td>Kit lanche aos controladores confirmado; equipe de gestão em definição</td><td>a definir</td></tr>
-<tr><td>Credenciais</td><td>91 nominais mais Direção; matriz de zonas</td><td>16/11</td></tr>
+<tr><td>Rádios</td><td>20 aparelhos em dois canais; técnico de plantão; bateria extra</td><td>06/11</td></tr>
+<tr><td>Uniforme</td><td>Em definição; se houver, grade de tamanhos depois de 16/11. Coletes da Rizz já separados</td><td>16/11</td></tr>
+<tr><td>Hidratação</td><td>5.456 copos de 200 ml de 03 a 06/12 (0,5 L por hora de presença + 10%)</td><td>06/11</td></tr>
+<tr><td>Alimentação</td><td>Kit lanche aos 70 controladores (140) pela produção; coordenação e supervisão em definição</td><td>a definir</td></tr>
+<tr><td>Credenciais</td><td>81 nominais (80 + Direção) depois da seleção; produtores de portão pela lista a definir; matriz de zonas</td><td>16/11</td></tr>
+<tr><td>Produtores de portão</td><td>Contratação pela organização; perfil e briefing da Rizz</td><td>a confirmar</td></tr>
 <tr><td>Plano da CET de saída</td><td>Horários de reversão dos bolsões, vias liberadas e dosagem de pedestres</td><td>a confirmar</td></tr>
 <tr><td>Praça do Portão 7</td><td>Estrutura provisória para Sala de Situação e órgãos</td><td>a confirmar</td></tr>
 <tr><td>Chefes de segurança dos portões</td><td>Nome por portão e turno; passagem registrada às 22h</td><td>a confirmar</td></tr></table></div>
@@ -539,12 +667,12 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <li><b>Planta oficial</b> para sobrepor este mapa e fixar pontos dos controladores e áreas frágeis</li>
 <li><b>Rádios:</b> pontos que levam aparelho; pontes com órgãos e chefes de segurança</li>
 <li><b>Alimentação da equipe de gestão</b></li>
-<li><b>Bloqueio viário fora do horário do Produtor CET</b></li>
+<li><b>Acompanhamento da CET</b> pela Coordenação Geral (sem Produtor CET)</li>
 <li><b>Transporte da equipe após 02h</b></li>
-<li><b>Oficial de ligação da PM:</b> formalizar por e-mail</li>
+<li><b>Reunião de alinhamento com a PM</b> (17 a 21/11), com materiais, kit lanche e hidratação da base</li>
 <li><b>Horário da saída:</b> o caderno indica término e dispersão às 00h30; confirmar se há saída antecipada a partir das 23h</li>
 <li><b>Plano operacional da CET:</b> o caderno ainda marca apoio ao trânsito como aguardando o plano da CET; obter o horário de reversão dos bolsões e a dosagem de saída</li>
-<li><b>Local do treinamento</b> de 28 e 29/11</li></ul>
+<li><b>Instrução dos controladores no dia:</b> horário e local</li></ul>
 <p class="mu">Itens de jornada de 12 h e contratos passam por validação jurídica antes de qualquer envio.</p></div>
 </div>
 </section>
@@ -566,7 +694,7 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <li>Fila em zigue-zague na calçada da Av. Feliciano Correia, conforme setas do mapa; gradis de 400 m e 260 m</li>
 <li>Validação: estimativa de ~50 validadores (produção)</li>
 <li>Saída crítica: fluxo para a estação</li>
-<li><b>Rizz:</b> produtor de portão, fila e interface com validação, segurança privada e orientação externa</li></ul></div>
+<li><b>Rizz:</b> produção do portão (produtor contratado pela organização), fila e interface com validação, segurança privada e orientação externa</li></ul></div>
 <div class="card hl"><b>Portão 8 · Público, PCD e VIP via transfer</b><ul>
 <li>Acesso só a pé, chegada pelo norte e pelo sul na Av. Sen. Teotônio Vilela, fechada a veículos não credenciados</li>
 <li>PCD: portão oficial, abertura 12h15, equipe dedicada em todos os portões, rotas niveladas e áreas reservadas; intérpretes de Libras e audiodescrição volantes</li>
@@ -574,12 +702,12 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <li>Validação: estimativa de ~18 validadores</li>
 <li>Saída: bolsões de aplicativo, táxi e ônibus</li></ul></div>
 <div class="card hl"><b>Portão Z · Fornecedores e shuttle</b><ul>
-<li>Acesso veicular, Rua João Paulo da Silva: fornecedores, carga, shuttle e transfer VIP</li>
+<li>Acesso veicular, Av. João Paulo da Silva: fornecedores, carga, shuttle e transfer VIP</li>
 <li>Estacionamento do shuttle VIP dentro do autódromo; validação de shuttle</li>
 <li><b>Rizz:</b> produtor dono da triagem por voucher e do bloqueio; baia fora da via; modo offline</li></ul></div>
 <div class="card hl"><b>Portão 7 · Artistas e credenciados</b><ul>
 <li>Credenciamento artístico e rota de artistas</li>
-<li>Praça em frente: Sala de Situação Rizz e órgãos (GCM e demais), com oficial de ligação da PM solicitado</li>
+<li>Praça em frente: Sala de Situação Rizz e órgãos (GCM e demais)</li>
 <li><b>Rizz:</b> produtor dono da triagem por credencial antecipada e do balcão de exceção</li></ul></div>
 </div>
 <div class="card wn" style="margin-top:12px"><b>Fora do planejamento por ora:</b> portões A, L, D, K e M. O Portão A é a praça do batalhão onde fica o posto de comando da PM. Também constam na planta Quadra (credenciamento do evento) e Bilheteria Autódromo (credenciamento pré-evento e SAC no dia).</div>
@@ -597,9 +725,9 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <p class="mu" style="margin-top:8px">O portador é submetido a inspeção e revista corporal; objetos não autorizados são descartados. Não há guarda-volumes. Mochila acima de 30×15×20 cm é proibida.</p></div>
 <div class="card"><h3>Perfil do público e implicações</h3><ul>
 <li>60% masculino, predomínio de 18 a 35+ anos, consumo moderado de álcool</li>
-<li>Chegada muito antes da abertura e filas longas: o G precisa de produtor desde as 10h</li>
+<li>Chegada muito antes da abertura e filas longas: o G tem produtor desde as 10h e a CG-1 em campo desde as 08h</li>
 <li>Muitos ambulantes no entorno: Rizz aciona Prefeitura, PMESP e GCM</li>
-<li>Água potável gratuita (decreto federal de 31/08/2026); garrafa pessoal permitida com regras de material divulgadas antes do festival</li></ul>
+<li>Água potável gratuita garantida pela organização (Decreto nº 13.109/2026); regras de garrafa divulgadas pela organização antes do festival</li></ul>
 <h3>Como chegar</h3><ul>
 <li>Linha 9 até a Estação Autódromo; trem expresso Pinheiros → Autódromo <span class="badge pd">a confirmar com a ViaMobilidade</span></li>
 <li>Bolsões da CET: aplicativo e embarque/desembarque, táxi, ônibus</li></ul></div>
@@ -660,7 +788,7 @@ Tudo que envolve órgãos públicos é <b>confirmado por e-mail</b>.</p></div>
 <li><b>Próximo passo:</b> sobrepor sobre esta planta os pontos de controladores, supervisores volantes, Sala de Situação e pontos de rádio (aba 4 e mapeamento de acessos).</li></ul></div>
 </section>
 </main>
-<footer><div class="wrap">Rizz · Primavera Sound 2026 · apresentação v2 para ajustes · uso restrito à produção executiva · valores de efetivo e prazos sujeitos a confirmação.</div></footer>
+<footer><div class="wrap">Rizz · Primavera Sound 2026 · apresentação v3 (04/11) para ajustes · uso restrito à produção executiva · valores de efetivo e prazos sujeitos a confirmação.</div></footer>
 
 <script>
 const tabs=document.querySelectorAll('#tabs button');

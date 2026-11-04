@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plano de Modais de Transporte & Experiência do Cliente — Primavera Sound 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --bg: #0F1210;
+  --surface: #171B19;
+  --surface-2: #212623;
+  --line: #2E3531;
+  --text: #F2F4F3;
+  --text-muted: #8F9993;
+  --green: #0B6E4F;
+  --green-glow: #109D71;
+  --green-light: #E3F5ED;
+  --yellow: #D9A74A;
+  --yellow-bg: #2B2313;
+  --blue: #2B6CB0;
+  --blue-light: #3182CE;
+  --red: #C53030;
+  --purple: #805AD5;
+  --display: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: "IBM Plex Mono", Menlo, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+header {
+  background: linear-gradient(180deg, rgba(11,110,79,0.18) 0%, rgba(15,18,16,0) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0 32px;
+}
+.brandbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.brand {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  color: #fff;
+  text-transform: uppercase;
+}
+.brand span {
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  color: var(--green-glow);
+  margin-left: 10px;
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
+}
+.tag-24h {
+  background: var(--green);
+  color: #fff;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 15px rgba(16,157,113,0.35);
+}
+.tag-24h::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.5; }
+  100% { transform: scale(0.9); opacity: 1; }
+}
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(28px, 4.2vw, 46px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.lead {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 85ch;
+  line-height: 1.6;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 16px 20px;
+  border-radius: 8px;
+  border-top: 3px solid var(--green);
+}
+.kpi-card b {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 800;
+  display: block;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.kpi-card span {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Tabs */
+nav.nav-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(23, 27, 25, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+nav.nav-tabs .wrap {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+}
+nav.nav-tabs button {
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  padding: 16px 18px;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+nav.nav-tabs button:hover {
+  color: var(--text);
+}
+nav.nav-tabs button[aria-selected="true"] {
+  color: #fff;
+  border-color: var(--green-glow);
+}
+
+/* Tab Sections */
+section.tab-pane {
+  display: none;
+  padding: 40px 0 60px;
+}
+section.tab-pane.active {
+  display: block;
+}
+
+h2 {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+h3 {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: var(--green-glow);
+}
+
+.grid { display: grid; gap: 20px; }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.g4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 24px;
+  border-radius: 8px;
+}
+.card.highlight {
+  border-left: 4px solid var(--green);
+}
+.card.warning {
+  border-left: 4px solid var(--yellow);
+  background: linear-gradient(90deg, rgba(217,167,74,0.06) 0%, rgba(23,27,25,1) 100%);
+}
+.card.blue {
+  border-left: 4px solid var(--blue-light);
+}
+
+/* Modal Icons / Badges */
+.badge-modal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: var(--display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+.badge-modal.trem { background: #0E4429; color: #39D353; border: 1px solid #238636; }
+.badge-modal.app { background: #3B2E05; color: #E3B341; border: 1px solid #7E6111; }
+.badge-modal.pcd { background: #1C335A; color: #58A6FF; border: 1px solid #1F6FEB; }
+.badge-modal.vip { background: #331A47; color: #D2A8FF; border: 1px solid #8957E5; }
+.badge-modal.bus { background: #441A1C; color: #FFA198; border: 1px solid #DA3633; }
+
+/* Flow Diagram / Metrô Map */
+.metro-board {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 20px 0;
+}
+.metro-line-badge {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: #fff;
+  margin-right: 6px;
+}
+.l9 { background: #00A88F; } /* Linha 9 Esmeralda */
+.l4 { background: #FFD100; color: #000; } /* Linha 4 Amarela */
+.l5 { background: #9B3894; } /* Linha 5 Lilás */
+.l1 { background: #003399; } /* Linha 1 Azul */
+.l2 { background: #007E5E; } /* Linha 2 Verde */
+.l3 { background: #EE3E34; } /* Linha 3 Vermelha */
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 13.5px;
+}
+table.data-table th, table.data-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+table.data-table th {
+  background: rgba(0,0,0,0.25);
+  font-family: var(--display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+table.data-table tr:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.walk-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.walk-step:last-child { border-bottom: none; }
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Callout Alert */
+.alert-box {
+  background: var(--yellow-bg);
+  border: 1px solid rgba(217,167,74,0.4);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.alert-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+.alert-text b {
+  font-family: var(--display);
+  color: var(--yellow);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 4px;
+}
+.alert-text p {
+  font-size: 13.5px;
+  color: #E6E1D8;
+  margin-bottom: 0;
+}
+
+ul.bullet-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+ul.bullet-list li {
+  margin-bottom: 8px;
+  color: #D1D8D4;
+}
+ul.bullet-list li b {
+  color: #fff;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .brandbar { flex-direction: column; align-items: flex-start; }
+  .kpi-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandbar">
+      <div class="brand">RIZZ<span>Plano Integrado de Mobilidade & Experiência</span></div>
+      <div class="tag-24h">Operação 24 Horas Garantida</div>
+    </div>
+    <h1>Modais de Transporte & Acessos<br>Primavera Sound 2026</h1>
+    <p class="lead">Manual operacional e guia de navegação de alta experiência (UX) para o público paulistano e milhares de turistas de outros estados. Entenda as conexões metroferroviárias, a lógica dos portões, os bolsões da CET e o funcionamento 24h na volta.</p>
+    
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <b>Estação Autódromo</b>
+        <span>Linha 9 - Esmeralda (Principal Eixo)</span>
+      </div>
+      <div class="kpi-card">
+        <b>~850 Metros</b>
+        <span>Caminhada Segura Segregada (10 min)</span>
+      </div>
+      <div class="kpi-card">
+        <b>00h30 → 02h00</b>
+        <span>Pico de Saída e Dispersão</span>
+      </div>
+      <div class="kpi-card">
+        <b>4 Portões Alvo</b>
+        <span>G (Trem), 8 (App/PCD), Z (VIP), 7 (Artistas)</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-tabs">
+  <div class="wrap" id="tabButtons" role="tablist">
+    <button role="tab" data-target="tab-overview" aria-selected="true">1 · Resumo dos Modais</button>
+    <button role="tab" data-target="tab-trem" aria-selected="false">2 · Trem & Metrô (Linha 9)</button>
+    <button role="tab" data-target="tab-app" aria-selected="false">3 · Apps, Táxis & Bolsões CET</button>
+    <button role="tab" data-target="tab-caminhada" aria-selected="false">4 · Caminhada Segura (Estação ➔ G)</button>
+    <button role="tab" data-target="tab-pcd-vip" aria-selected="false">5 · PCD & Shuttles VIP</button>
+    <button role="tab" data-target="tab-24h" aria-selected="false">6 · Operação 24h & Volta Segura</button>
+    <button role="tab" data-target="tab-dicas" aria-selected="false">7 · Dicas Anti-Ansiedade (Turistas)</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- TAB 1: VISÃO GERAL -->
+  <section class="tab-pane active" id="tab-overview">
+    <h2>Matriz de Conexão: Modal ➔ Portão Alvo</h2>
+    <p class="lead" style="margin-bottom: 24px;">O viário do entorno imediato de Interlagos estará totalmente bloqueado pela CET (acesso restrito a moradores credenciados). <b>Carros de passeio comuns não chegam aos portões.</b> A escolha do modal dita diretamente o portão de entrada do cliente.</p>
+
+    <div class="grid g3">
+      <div class="card highlight">
+        <span class="badge-modal trem">Recomendado · 80% do Público</span>
+        <h3>Trem / Linha 9 - Esmeralda</h3>
+        <p><b>Portão de Acesso:</b> <span style="color:#39D353; font-weight:700;">PORTÃO G</span></p>
+        <p style="font-size:13.5px; color:#c4cac6; margin-top:8px;">Desembarque na <b>Estação Autódromo</b> e caminhada de 850m por corredor exclusivo e 100% segregado por gradis altos na Av. Feliciano Correia.</p>
+        <div style="margin-top:14px; font-size:12px; color:var(--text-muted);">
+          <b>Vantagem:</b> Sem trânsito, sem tarifa dinâmica de app, saída garantida a noite toda.
+        </div>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--yellow);">
+        <span class="badge-modal app">Transporte Individual</span>
+        <h3>Uber, 99 & Táxis</h3>
+        <p><b>Portão de Acesso:</b> <span style="color:var(--yellow); font-weight:700;">PORTÃO 8</span></p>
+        <p style="font-size:13.5px; color:#c4cac6; margin-top:8px;">Desembarque obrigatório nos <b>Bolsões Oficiais da CET na Av. Interlagos</b> (Praça Moscou). Caminhada rápida pela Av. Teotônio Vilela (fechada para veículos).</p>
+        <div style="margin-top:14px; font-size:12px; color:var(--text-muted);">
+          <b>Alerta:</b> Não digite "Autódromo" no GPS; os carros serão barrados no bloqueio viário.
+        </div>
+      </div>
+
+      <div class="card blue">
+        <span class="badge-modal pcd">Acessibilidade Total</span>
+        <h3>PCD & Mobilidade Reduzida</h3>
+        <p><b>Portão de Acesso:</b> <span style="color:var(--blue-light); font-weight:700;">PORTÃO 8</span></p>
+        <p style="font-size:13.5px; color:#c4cac6; margin-top:8px;">Abertura antecipada exclusiva às <b>12h15</b> (15 min antes do público geral). Rota nivelada, equipe especializada de acolhimento e suporte de vans/caddies.</p>
+        <div style="margin-top:14px; font-size:12px; color:var(--text-muted);">
+          <b>Diferencial:</b> Intérpretes de Libras e audiodescrição volantes no festival.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:20px;">
+      <div class="card" style="border-left: 4px solid var(--purple);">
+        <span class="badge-modal vip">Serviço Exclusivo</span>
+        <h3>Shuttles Oficiais & Transfer VIP</h3>
+        <p><b>Portão de Acesso:</b> <span style="color:#D2A8FF; font-weight:700;">PORTÃO Z</span> (Rua João Paulo da Silva)</p>
+        <p style="font-size:13.5px; color:#c4cac6; margin-top:8px;">Ponto de embarque em shoppings e hotéis credenciados da Zona Sul/Oeste. Os veículos autorizados entram diretamente no estacionamento VIP dentro do autódromo.</p>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--red);">
+        <span class="badge-modal bus">Linhas Regulares & Noturnas</span>
+        <h3>Ônibus SPTrans</h3>
+        <p><b>Portão de Acesso:</b> <span style="color:#FFA198; font-weight:700;">PORTÃO 8 / G</span></p>
+        <p style="font-size:13.5px; color:#c4cac6; margin-top:8px;">Bolsão especial de ônibus montado na Av. Interlagos / Av. do Rio Bonito. Linhas diretas ligando Interlagos aos Terminais Santo Amaro e Centro/Bandeira.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 2: TREM & METRÔ -->
+  <section class="tab-pane" id="tab-trem">
+    <h2>O Eixo Central: Linha 9 - Esmeralda (ViaMobilidade)</h2>
+    <p class="lead">A Estação Autódromo é a principal porta de entrada do festival. Para quem não é de São Paulo, o segredo é chegar à <b>Estação Pinheiros (Linha 4-Amarela)</b> ou à <b>Estação Santo Amaro (Linha 5-Lilás)</b> para pegar a Linha 9 direto até Interlagos.</p>
+
+    <div class="metro-board">
+      <h3>Rotas Rápidas a Partir dos Principais Pontos de São Paulo</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Origem do Passageiro</th>
+            <th>Linha Inicial</th>
+            <th>Estação de Conexão (Baldeação)</th>
+            <th>Linha Final até Autódromo</th>
+            <th>Tempo Estimado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Av. Paulista / Jardins</b></td>
+            <td><span class="metro-line-badge l4">Linha 4 - Amarela</span> (Paulista/Consolação)</td>
+            <td>Estação <b>Pinheiros</b></td>
+            <td><span class="metro-line-badge l9">Linha 9 - Esmeralda</span></td>
+            <td>~35 a 40 min</td>
+          </tr>
+          <tr>
+            <td><b>Centro Histórico / República</b></td>
+            <td><span class="metro-line-badge l4">Linha 4 - Amarela</span> ou <span class="metro-line-badge l3">Linha 3</span></td>
+            <td>Estação <b>República</b> ➔ <b>Pinheiros</b></td>
+            <td><span class="metro-line-badge l9">Linha 9 - Esmeralda</span></td>
+            <td>~45 a 50 min</td>
+          </tr>
+          <tr>
+            <td><b>Moema / Vila Mariana / Chácara Klabin</b></td>
+            <td><span class="metro-line-badge l5">Linha 5 - Lilás</span></td>
+            <td>Estação <b>Santo Amaro</b></td>
+            <td><span class="metro-line-badge l9">Linha 9 - Esmeralda</span></td>
+            <td>~25 a 30 min</td>
+          </tr>
+          <tr>
+            <td><b>Zona Norte / Santana / Rodov. Tietê</b></td>
+            <td><span class="metro-line-badge l1">Linha 1 - Azul</span></td>
+            <td>Estação <b>Luz</b> ➔ Linha 4 ➔ <b>Pinheiros</b></td>
+            <td><span class="metro-line-badge l9">Linha 9 - Esmeralda</span></td>
+            <td>~60 a 70 min</td>
+          </tr>
+          <tr>
+            <td><b>Aeroporto de Congonhas (CGH)</b></td>
+            <td>Táxi/App até Estação Eucaliptos (L5) ou São Judas (L1)</td>
+            <td>Estação <b>Santo Amaro</b></td>
+            <td><span class="metro-line-badge l9">Linha 9 - Esmeralda</span></td>
+            <td>~40 a 45 min</td>
+          </tr>
+          <tr>
+            <td><b>Aeroporto de Guarulhos (GRU)</b></td>
+            <td>Trem Expresso Aeroporto (Linha 13)</td>
+            <td>Estação <b>Luz</b> ➔ Linha 4 ➔ <b>Pinheiros</b></td>
+            <td><span class="metro-line-badge l9">Linha 9 - Esmeralda</span></td>
+            <td>~80 a 90 min</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-icon">💡</div>
+      <div class="alert-text">
+        <b>Dica de Ouro Anti-Filas (Bilhete Digital TOP):</b>
+        <p>Não deixe para comprar a passagem de trem na bilheteria da estação na hora do festival! Compre seu bilhete QR Code com antecedência pelo aplicativo <b>TOP</b> ou via WhatsApp oficial da ViaMobilidade. Salve o QR Code na galeria de fotos do celular caso falte internet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 3: APPS, TAXIS & BOLSÕES CET -->
+  <section class="tab-pane" id="tab-app">
+    <h2>Bolsões Oficiais da CET: Aplicativos, Táxis e Caronas</h2>
+    <p class="lead">Para evitar o colapso do trânsito na Zona Sul, a Companhia de Engenharia de Tráfego (CET) implanta bloqueios em um raio de até 2 km do autódromo. Veículos de aplicativo e táxis operam exclusivamente nos bolsões demarcados.</p>
+
+    <div class="grid g2" style="margin-top:20px;">
+      <div class="card" style="border-top: 3px solid var(--yellow);">
+        <h3>🟡 Bolsão de Aplicativos (Uber / 99)</h3>
+        <ul class="bullet-list">
+          <li><b>Localização:</b> Av. Interlagos (entre a Praça Moscou e a Praça Batista Botelho).</li>
+          <li><b>Como chamar na ida:</b> Coloque no app o destino <b>"Praça Moscou - Interlagos"</b>. Os motoristas conseguem acessar esse bolsão sem sofrer retenção de bloqueio.</li>
+          <li><b>Acesso ao Autódromo:</b> A partir da Praça Moscou, o usuário faz uma caminhada plana e tranquila de 8 a 10 minutos pela Av. Senador Teotônio Vilela (fechada a carros) até o <b>Portão 8</b>.</li>
+          <li><b>Na saída (volta):</b> Caminhe até o bolsão da Praça Moscou antes de solicitar a corrida para garantir que o motorista consiga chegar até você.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-top: 3px solid #D53F8C;">
+        <h3>🟣 Bolsão de Táxis Credenciados</h3>
+        <ul class="bullet-list">
+          <li><b>Localização:</b> Av. Interlagos, junto à Praça Jacob Dubena e proximidades do Portão A.</li>
+          <li><b>Frota:</b> Centenas de táxis municipais credenciados com fila rotativa organizada pela CET e DTP.</li>
+          <li><b>Vantagem Competitiva:</b> Tarifa tabelada pelo taxímetro oficial, sem cobrança de preço dinâmico abusivo e com acesso preferencial por corredores de ônibus na volta.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert-box" style="margin-top:24px;">
+      <div class="alert-icon">⚠️</div>
+      <div class="alert-text">
+        <b>Atenção: Carona de Amigos ou Familiares</b>
+        <p>Se alguém for levar ou buscar você de carro particular, o ponto oficial de parada é o mesmo Bolsão de Embarque/Desembarque da Praça Moscou. Qualquer tentativa de entrar nas ruas internas do bairro será barrada pela Polícia Militar e agentes da CET.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 4: CAMINHADA SEGURA -->
+  <section class="tab-pane" id="tab-caminhada">
+    <h2>Caminhada Segura: Estação Autódromo ➔ Portão G</h2>
+    <p class="lead">O trajeto a pé mais utilizado de Interlagos é uma operação planejada em conjunto entre RIZZ, CET, ViaMobilidade e Polícia Militar para garantir total integridade física ao público.</p>
+
+    <div class="card" style="margin:20px 0;">
+      <div class="walk-step">
+        <div class="step-num">1</div>
+        <div>
+          <b style="font-size:16px; color:#fff;">Desembarque na Estação Autódromo</b>
+          <p style="color:var(--text-muted); font-size:14px;">Ao descer do trem na Linha 9, siga a sinalização suspensa e as orientações dos monitores da ViaMobilidade em direção à passarela de saída da Av. Feliciano Correia.</p>
+        </div>
+      </div>
+
+      <div class="walk-step">
+        <div class="step-num">2</div>
+        <div>
+          <b style="font-size:16px; color:#fff;">Entrada no Corredor Segregado (Gradil Azul)</b>
+          <p style="color:var(--text-muted); font-size:14px;">A caminhada de cerca de 850 metros é 100% isolada por gradis metálicos de contenção alta. Nenhum carro, moto ou bicicleta transita nessa pista. É uma rota 100% peatonal.</p>
+        </div>
+      </div>
+
+      <div class="walk-step">
+        <div class="step-num">3</div>
+        <div>
+          <b style="font-size:16px; color:#fff;">Pré-Checagem e Orientação de Fluxo RIZZ</b>
+          <p style="color:var(--text-muted); font-size:14px;">Ao longo do percurso, produtores da RIZZ e orientadores auxiliam com megafones e sinalização visual para que o público já abra o app Ingresse, prepare o QR Code dinâmico e descarte latas/garrafas rígidas.</p>
+        </div>
+      </div>
+
+      <div class="walk-step">
+        <div class="step-num">4</div>
+        <div>
+          <b style="font-size:16px; color:#fff;">Fila em Zigue-Zague e Entrada no Portão G</b>
+          <p style="color:var(--text-muted); font-size:14px;">Chegando à calçada do Autódromo, a fila é organizada em serpentina/zigue-zague com barreiras de 400m e 260m para evitar estrangulamento antes das catracas de validação.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <h3>Extensão Total</h3>
+        <p style="font-size:24px; font-weight:800; color:#fff;">~850 Metros</p>
+        <p style="color:var(--text-muted); font-size:12px;">Caminhada leve e sinalizada</p>
+      </div>
+      <div class="card">
+        <h3>Tempo de Percurso</h3>
+        <p style="font-size:24px; font-weight:800; color:#fff;">10 a 12 Minutos</p>
+        <p style="color:var(--text-muted); font-size:12px;">Em ritmo normal de caminhada</p>
+      </div>
+      <div class="card">
+        <h3>Segurança Integrada</h3>
+        <p style="font-size:24px; font-weight:800; color:#fff;">Iluminação & PM</p>
+        <p style="color:var(--text-muted); font-size:12px;">Câmeras e efetivo ostensivo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 5: PCD & SHUTTLES VIP -->
+  <section class="tab-pane" id="tab-pcd-vip">
+    <h2>Acessibilidade (PCD) & Shuttles Exclusivos VIP</h2>
+    
+    <div class="grid g2" style="margin-top:20px;">
+      <div class="card highlight">
+        <span class="badge-modal pcd">Portão 8 · Oficial PCD</span>
+        <h3>Protocolo de Acessibilidade & Inclusão</h3>
+        <ul class="bullet-list">
+          <li><b>Abertura Antecipada às 12h15:</b> O público PCD e seu acompanhante entram 15 minutos antes da abertura geral (12h30), garantindo acesso confortável e sem tumulto de filas.</li>
+          <li><b>Acesso Dedicado:</b> Embarque/desembarque de veículos adaptados em baia prioritária na Av. Teotônio Vilela, próximo ao Portão 8.</li>
+          <li><b>Estrutura Interna:</b> Rotas niveladas, plataformas elevadas com visão frontal dos palcos, banheiros acessíveis exclusivos e suporte contínuo da equipe de apoio.</li>
+          <li><b>Suporte em Libras & Audiodescrição:</b> Intérpretes especializados atuando de forma volante e nas plataformas de visualização.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--purple);">
+        <span class="badge-modal vip">Portão Z · Shuttles & VIP</span>
+        <h3>Operação de Shuttles & Primavera VIP</h3>
+        <ul class="bullet-list">
+          <li><b>Acesso Veicular pelo Portão Z:</b> Entrada exclusiva pela Rua João Paulo da Silva. Não cruza em nenhum momento com o fluxo a pé de pedestres.</li>
+          <li><b>Bolsão Interno de Estacionamento:</b> Os shuttles credenciados e transfers autorizados desembarcam os passageiros VIP diretamente dentro do complexo de Interlagos.</li>
+          <li><b>Triagem Rigorosa RIZZ:</b> Checagem antecipada de vouchers e credenciais veiculares na baia de desaceleração externa para evitar congestionamento na via pública.</li>
+          <li><b>Saída Noturna Fluida:</b> Rota direta de retorno com saída rápida para a Marginal Pinheiros.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB 6: OPERAÇÃO 24 HORAS -->
+  <section class="tab-pane" id="tab-24h">
+    <h2>Como Funciona a Madrugada 24 Horas em São Paulo</h2>
+    <p class="lead">Muitos turistas têm receio de ficar "ilhados" após o último show na madrugada. A operação metroferroviária paulistana conta com um esquema de integração especial para grandes eventos:</p>
+
+    <div class="card" style="margin:24px 0; border-top: 4px solid var(--green);">
+      <h3>O Mecanismo da Operação Noturna na Prática</h3>
+      <div class="grid g2" style="margin-top:14px;">
+        <div style="background:rgba(255,255,255,0.02); padding:16px; border-radius:6px; border:1px solid var(--line);">
+          <b style="color:#39D353; font-size:16px; display:block; margin-bottom:6px;">ESTAÇÃO AUTÓDROMO (LINHA 9)</b>
+          <p style="font-size:13.5px; color:#c4cac6;">Fica aberta ininterruptamente para <b>EMBARQUE DE PASSAGEIROS</b> durante toda a noite e madrugada (das 00h00 até o amanhecer do dia seguinte). Os trens circulam com intervalos regulados para absorver a multidão.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.02); padding:16px; border-radius:6px; border:1px solid var(--line);">
+          <b style="color:var(--blue-light); font-size:16px; display:block; margin-bottom:6px;">DEMAIS ESTAÇÕES DA MALHA</b>
+          <p style="font-size:13.5px; color:#c4cac6;">As estações das Linhas 1-Azul, 2-Verde, 3-Vermelha, 4-Amarela e 5-Lilás permanecem abertas <b>EXCLUSIVAMENTE PARA DESEMBARQUE E BALDEAÇÃO</b>. Ou seja, você não pode entrar nelas na madrugada, mas consegue sair nelas e transferir de linha normalmente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="metro-board">
+      <h3>Baldeações Abertas na Madrugada a Partir de Interlagos</h3>
+      <ul class="bullet-list" style="font-size:14px;">
+        <li>Na <b>Estação Santo Amaro</b>: Baldeação livre da Linha 9 ➔ Linha 5-Lilás (rumo a Moema, Santa Cruz e Chácara Klabin).</li>
+        <li>Na <b>Estação Pinheiros</b>: Baldeação livre da Linha 9 ➔ Linha 4-Amarela (rumo a Faria Lima, Paulista, Higienópolis e Luz).</li>
+        <li>Na <b>Estação Luz</b>: Baldeação da Linha 4 ➔ Linha 1-Azul (rumo a Santana, Liberdade e Jabaquara).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TAB 7: DICAS ANTI-ANSIEDADE -->
+  <section class="tab-pane" id="tab-dicas">
+    <h2>Guia Anti-Ansiedade: Dicas de Sobrevivência para Turistas</h2>
+    <p class="lead">Pequenos detalhes de planejamento transformam a experiência do festival e evitam perrengues comuns na volta para casa.</p>
+
+    <div class="grid g2" style="margin-top:20px;">
+      <div class="card warning">
+        <h3>📱 1. Sinal de Celular Saturado às 00h30</h3>
+        <p style="font-size:13.5px; color:#ddd;">No encerramento dos shows, 40 mil pessoas tentam usar internet e fazer chamadas ao mesmo tempo, causando lentidão temporária nas antenas 4G/5G. <b>Dica:</b> Não dependa de WhatsApp para achar seus amigos na saída; combinem previamente um ponto de encontro fixo (ex.: totem de saída do Portão G ou totem da Estação Autódromo).</p>
+      </div>
+
+      <div class="card highlight">
+        <h3>🔋 2. Bateria do Celular é Vital</h3>
+        <p style="font-size:13.5px; color:#ddd;">O ingresso do Primavera Sound é <b>100% digital via App Ingresse com QR Code dinâmico</b> (prints de tela e PDFs impressos são sumariamente rejeitados nas catracas). Carregue seu aparelho a 100% antes de sair e leve uma bateria portátil (powerbank compacto homologado).</p>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--red);">
+        <h3>🎒 3. Regra de Mochilas & Guarda-Volumes</h3>
+        <p style="font-size:13.5px; color:#ddd;"><b>O festival NÃO POSSUI serviço de guarda-volumes.</b> Mochilas ou bolsas com dimensões superiores a <b>30 x 15 x 20 cm</b> serão retidas na revista e descartadas. Leve apenas bolsas tiracolo/shoulder bags pequenas ou pochetes.</p>
+      </div>
+
+      <div class="card blue">
+        <h3>💧 4. Água Gratuita e Hidratação</h3>
+        <p style="font-size:13.5px; color:#ddd;">O festival cumpre rigorosamente o decreto federal de hidratação: é permitida a entrada com garrafas plásticas flexíveis de uso pessoal para abastecimento gratuito em dezenas de bebedouros e tinas com gelo distribuídos em todos os setores.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>RIZZ Operações & Mobilidade · Primavera Sound 2026 · Autódromo de Interlagos · Apresentação Executiva de Modais e Fluxos</p>
+  </div>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('#tabButtons button');
+  const panes = document.querySelectorAll('section.tab-pane');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      
+      buttons.forEach(b => b.setAttribute('aria-selected', 'false'));
+      panes.forEach(p => p.classList.remove('active'));
+
+      btn.setAttribute('aria-selected', 'true');
+      const activePane = document.getElementById(targetId);
+      if (activePane) {
+        activePane.classList.add('active');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
